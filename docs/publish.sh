@@ -9,3 +9,4 @@ git co gh-pages
 git merge master
 git push
 git co master
+echo "Publish Success!🎉🎉🎉"
