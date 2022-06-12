@@ -1,0 +1,894 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Mongo DB · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Zander Hsueh">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="rem布局.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Dev
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="MongoDB.html">
+            
+                <a href="MongoDB.html">
+            
+                    
+                    Mongo DB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="rem布局.html">
+            
+                <a href="rem布局.html">
+            
+                    
+                    rem布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Ops
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Ops/Docker.html">
+            
+                <a href="../Ops/Docker.html">
+            
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Mongo DB</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#mongodb"><b> </b>MongoDB</a></li><ul><li><span class="title-icon "></span><a href="#&#x4E3B;&#x952E;"><b>1. </b>&#x4E3B;&#x952E;</a></li><li><span class="title-icon "></span><a href="#&#x589E;"><b>2. </b>&#x589E;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5199;&#x5165;&#x5355;&#x4E2A;&#x6587;&#x6863;"><b>2.1. </b>&#x5199;&#x5165;&#x5355;&#x4E2A;&#x6587;&#x6863;</a></li><li><span class="title-icon "></span><a href="#&#x5199;&#x5165;&#x591A;&#x4E2A;&#x6587;&#x6863;"><b>2.2. </b>&#x5199;&#x5165;&#x591A;&#x4E2A;&#x6587;&#x6863;</a></li></ul><li><span class="title-icon "></span><a href="#&#x67E5;"><b>3. </b>&#x67E5;</a></li><ul><li><span class="title-icon "></span><a href="#&#x8FC7;&#x6EE4;&#x6570;&#x636E;"><b>3.1. </b>&#x8FC7;&#x6EE4;&#x6570;&#x636E;</a></li><li><span class="title-icon "></span><a href="#&#x6BD4;&#x8F83;&#x64CD;&#x4F5C;&#x7B26;"><b>3.2. </b>&#x6BD4;&#x8F83;&#x64CD;&#x4F5C;&#x7B26;</a></li><li><span class="title-icon "></span><a href="#&#x903B;&#x8F91;&#x64CD;&#x4F5C;&#x7B26;"><b>3.3. </b>&#x903B;&#x8F91;&#x64CD;&#x4F5C;&#x7B26;</a></li><li><span class="title-icon "></span><a href="#&#x5B57;&#x6BB5;&#x64CD;&#x4F5C;&#x7B26;"><b>3.4. </b>&#x5B57;&#x6BB5;&#x64CD;&#x4F5C;&#x7B26;</a></li><li><span class="title-icon "></span><a href="#&#x6570;&#x7EC4;&#x64CD;&#x4F5C;&#x7B26;"><b>3.5. </b>&#x6570;&#x7EC4;&#x64CD;&#x4F5C;&#x7B26;</a></li><li><span class="title-icon "></span><a href="#&#x8FD0;&#x7B97;&#x64CD;&#x4F5C;&#x7B26;"><b>3.6. </b>&#x8FD0;&#x7B97;&#x64CD;&#x4F5C;&#x7B26;</a></li><li><span class="title-icon "></span><a href="#&#x6587;&#x6863;&#x6E38;&#x6807;"><b>3.7. </b>&#x6587;&#x6863;&#x6E38;&#x6807;</a></li><li><span class="title-icon "></span><a href="#&#x5206;&#x9875;&#x51FD;&#x6570;"><b>3.8. </b>&#x5206;&#x9875;&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x6392;&#x5E8F;&#x51FD;&#x6570;"><b>3.9. </b>&#x6392;&#x5E8F;&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x7EDF;&#x8BA1;&#x51FD;&#x6570;"><b>3.10. </b>&#x7EDF;&#x8BA1;&#x51FD;&#x6570;</a></li></ul><li><span class="title-icon "></span><a href="#&#x6539;"><b>4. </b>&#x6539;</a></li><ul><li><span class="title-icon "></span><a href="#&#x66F4;&#x65B0;&#x6587;&#x6863;&#x7684;&#x65B9;&#x6CD5;"><b>4.1. </b>&#x66F4;&#x65B0;&#x6587;&#x6863;&#x7684;&#x65B9;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#&#x66F4;&#x65B0;&#x64CD;&#x4F5C;&#x7B26;"><b>4.2. </b>&#x66F4;&#x65B0;&#x64CD;&#x4F5C;&#x7B26;</a></li></ul><li><span class="title-icon "></span><a href="#&#x5220;"><b>5. </b>&#x5220;</a></li><li><span class="title-icon "></span><a href="#&#x805A;&#x5408;&#x64CD;&#x4F5C;"><b>6. </b>&#x805A;&#x5408;&#x64CD;&#x4F5C;</a></li><ul><li><span class="title-icon "></span><a href="#project"><b>6.1. </b>$project</a></li><li><span class="title-icon "></span><a href="#macth"><b>6.2. </b>$macth</a></li><li><span class="title-icon "></span><a href="#limit-&#x548C;-skip"><b>6.3. </b>$limit &#x548C; $skip</a></li><li><span class="title-icon "></span><a href="#unwind"><b>6.4. </b>$unwind</a></li><li><span class="title-icon "></span><a href="#sort"><b>6.5. </b>$sort</a></li><li><span class="title-icon "></span><a href="#lookup"><b>6.6. </b>$lookup</a></li><li><span class="title-icon "></span><a href="#group"><b>6.7. </b>$group</a></li><li><span class="title-icon "></span><a href="#out"><b>6.8. </b>$out</a></li><li><span class="title-icon "></span><a href="#&#x805A;&#x5408;&#x64CD;&#x4F5C;&#x989D;&#x5916;&#x914D;&#x7F6E;"><b>6.9. </b>&#x805A;&#x5408;&#x64CD;&#x4F5C;&#x989D;&#x5916;&#x914D;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x805A;&#x5408;&#x64CD;&#x4F5C;&#x8868;&#x8FBE;&#x5F0F;"><b>6.10. </b>&#x805A;&#x5408;&#x64CD;&#x4F5C;&#x8868;&#x8FBE;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x64CD;&#x4F5C;&#x7B26;"><b>6.11. </b>&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x64CD;&#x4F5C;&#x7B26;</a></li></ul><li><span class="title-icon "></span><a href="#&#x7D22;&#x5F15;"><b>7. </b>&#x7D22;&#x5F15;</a></li><ul><li><span class="title-icon "></span><a href="#explain-&#x67E5;&#x8BE2;&#x5206;&#x6790;&#x5DE5;&#x5177;"><b>7.1. </b>explain() &#x67E5;&#x8BE2;&#x5206;&#x6790;&#x5DE5;&#x5177;</a></li><li><span class="title-icon "></span><a href="#&#x590D;&#x5408;&#x7D22;&#x5F15;"><b>7.2. </b>&#x590D;&#x5408;&#x7D22;&#x5F15;</a></li><li><span class="title-icon "></span><a href="#&#x591A;&#x952E;&#x7D22;&#x5F15;"><b>7.3. </b>&#x591A;&#x952E;&#x7D22;&#x5F15;</a></li><li><span class="title-icon "></span><a href="#&#x7D22;&#x5F15;&#x5BF9;&#x6392;&#x5E8F;&#x7684;&#x5F71;&#x54CD;"><b>7.4. </b>&#x7D22;&#x5F15;&#x5BF9;&#x6392;&#x5E8F;&#x7684;&#x5F71;&#x54CD;</a></li><li><span class="title-icon "></span><a href="#&#x552F;&#x4E00;&#x7D22;&#x5F15;"><b>7.5. </b>&#x552F;&#x4E00;&#x7D22;&#x5F15;</a></li><li><span class="title-icon "></span><a href="#&#x7A00;&#x758F;&#x7D22;&#x5F15;"><b>7.6. </b>&#x7A00;&#x758F;&#x7D22;&#x5F15;</a></li><li><span class="title-icon "></span><a href="#&#x7D22;&#x5F15;&#x751F;&#x5B58;&#x65F6;&#x95F4;"><b>7.7. </b>&#x7D22;&#x5F15;&#x751F;&#x5B58;&#x65F6;&#x95F4;</a></li><li><span class="title-icon "></span><a href="#&#x5220;&#x9664;&#x7D22;&#x5F15;"><b>7.8. </b>&#x5220;&#x9664;&#x7D22;&#x5F15;</a></li></ul><li><span class="title-icon "></span><a href="#&#x6570;&#x636E;&#x6A21;&#x578B;"><b>8. </b>&#x6570;&#x636E;&#x6A21;&#x578B;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6587;&#x6863;&#x95F4;&#x5173;&#x7CFB;"><b>8.1. </b>&#x6587;&#x6863;&#x95F4;&#x5173;&#x7CFB;</a></li></ul><li><span class="title-icon "></span><a href="#mongoose"><b>9. </b>Mongoose</a></li><li><span class="title-icon "></span><a href="#&#x590D;&#x5236;&#x96C6;"><b>10. </b>&#x590D;&#x5236;&#x96C6;</a></li><ul><li><span class="title-icon "></span><a href="#&#x590D;&#x5236;&#x96C6;&#x540C;&#x6B65;&#x89C4;&#x5219;"><b>10.1. </b>&#x590D;&#x5236;&#x96C6;&#x540C;&#x6B65;&#x89C4;&#x5219;</a></li></ul><li><span class="title-icon "></span><a href="#&#x5206;&#x7247;"><b>11. </b>&#x5206;&#x7247;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5206;&#x7247;&#x7ED3;&#x6784;"><b>11.1. </b>&#x5206;&#x7247;&#x7ED3;&#x6784;</a></li><li><span class="title-icon "></span><a href="#&#x5206;&#x7247;&#x7247;&#x952E;"><b>11.2. </b>&#x5206;&#x7247;&#x7247;&#x952E;</a></li><li><span class="title-icon "></span><a href="#&#x5982;&#x4F55;&#x9009;&#x62E9;&#x7247;&#x952E;"><b>11.3. </b>&#x5982;&#x4F55;&#x9009;&#x62E9;&#x7247;&#x952E;</a></li><li><span class="title-icon "></span><a href="#&#x5206;&#x7247;&#x67E5;&#x8BE2;"><b>11.4. </b>&#x5206;&#x7247;&#x67E5;&#x8BE2;</a></li></ul></ul></ul></div><a href="#mongodb" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="mongodb"><a name="mongodb" class="anchor-navigation-ex-anchor" href="#mongodb"><i class="fa fa-link" aria-hidden="true"></i></a> MongoDB</h1>
+<h2 id="&#x4E3B;&#x952E;"><a name="&#x4E3B;&#x952E;" class="anchor-navigation-ex-anchor" href="#&#x4E3B;&#x952E;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x4E3B;&#x952E;</h2>
+<ul>
+<li>&#x7528;&#x4E8E;&#x4FDD;&#x8BC1;&#x6BCF;&#x4E00;&#x6761;&#x6570;&#x636E;&#x7684;&#x552F;&#x4E00;&#x6027;</li>
+<li>&#x81EA;&#x52A8;&#x6DFB;&#x52A0;&#xFF0C;&#x65E0;&#x9700;&#x81EA;&#x884C;&#x6307;&#x5B9A;&#xFF0C;&#x4E3B;&#x952E;&#x540D;&#x4E3A; <code>_id</code></li>
+<li><p><code>_id</code> &#x662F;&#x4E00;&#x4E2A; ObjectId &#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5373;&#x4E00;&#x4E2A;12&#x4E2A;&#x5B57;&#x8282;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF08;4e5ade53-8cd45e-9de3-d943ae&#xFF09;</p>
+<ul>
+<li>4&#x5B50;&#x8282;&#x662F;&#x5B58;&#x50A8;&#x8FD9;&#x6761;&#x6570;&#x636E;&#x7684;&#x65F6;&#x95F4;&#x6233;</li>
+<li>3&#x5B57;&#x8282;&#x662F;&#x5B58;&#x50A8;&#x8FD9;&#x6761;&#x6570;&#x636E;&#x7684;&#x7535;&#x8111;&#x7684;&#x6807;&#x8BC6;&#x7B26;</li>
+<li>2&#x5B57;&#x8282;&#x662F;&#x5B58;&#x50A8;&#x8FD9;&#x6761;&#x6570;&#x636E;&#x7684; MongoDB &#x8FDB;&#x7A0B; id</li>
+<li><p>3&#x5B57;&#x8282;&#x662F;&#x8BA1;&#x6570;&#x5668;</p>
+<blockquote>
+<p>&#x53EF;&#x4FDD;&#x8BC1;&#x6570;&#x636E;&#x5E93;&#x6A2A;&#x5411;&#x6269;&#x5C55;&#x540E;&#x6570;&#x636E;&#x7684;&#x552F;&#x4E00;&#x6027;&#x3002;</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="&#x589E;"><a name="&#x589E;" class="anchor-navigation-ex-anchor" href="#&#x589E;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x589E;</h2>
+<h3 id="&#x5199;&#x5165;&#x5355;&#x4E2A;&#x6587;&#x6863;"><a name="&#x5199;&#x5165;&#x5355;&#x4E2A;&#x6587;&#x6863;" class="anchor-navigation-ex-anchor" href="#&#x5199;&#x5165;&#x5355;&#x4E2A;&#x6587;&#x6863;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. &#x5199;&#x5165;&#x5355;&#x4E2A;&#x6587;&#x6863;</h3>
+<p><strong>1. <code>db.&lt;collection&gt;.insertOne()</code></strong></p>
+<p><strong>2. <code>db.&lt;collection&gt;.save()</code></strong></p>
+<blockquote>
+<p>&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x7684;&#x533A;&#x522B;&#x5728;&#x4E8E;&#x63D2;&#x5165;&#x65F6;&#x5982;&#x679C;&#x4E3B;&#x952E;&#x91CD;&#x590D;&#xFF0C;<code>insertOne()</code> &#x62A5;&#x9519;&#xFF0C;&#x63D2;&#x5165;&#x5931;&#x8D25;&#xFF0C;&#x800C; <code>save()</code> &#x4F1A;&#x8986;&#x76D6;&#x5DF2;&#x5B58;&#x5728;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+</blockquote>
+<h3 id="&#x5199;&#x5165;&#x591A;&#x4E2A;&#x6587;&#x6863;"><a name="&#x5199;&#x5165;&#x591A;&#x4E2A;&#x6587;&#x6863;" class="anchor-navigation-ex-anchor" href="#&#x5199;&#x5165;&#x591A;&#x4E2A;&#x6587;&#x6863;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. &#x5199;&#x5165;&#x591A;&#x4E2A;&#x6587;&#x6863;</h3>
+<p><strong>1.<code>db.&lt;collection&gt;.insertMany()</code></strong></p>
+<p>&#x63A5;&#x6536;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>&#x6587;&#x6863;&#x6570;&#x7EC4;</li>
+<li>&#x53EF;&#x9009;&#x7684;&#x914D;&#x7F6E;&#x9879;&#x5BF9;&#x8C61;&#xFF0C;&#x5BF9;&#x8C61;&#x5185;&#x53EF;&#x4F20;&#x5165; <code>ordered</code> &#xFF0C;&#x8868;&#x793A;&#x662F;&#x5426;&#x6309;&#x987A;&#x5E8F;&#x5199;&#x5165;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A; true&#xFF0C;&#x524D;&#x9762;&#x7684;&#x6587;&#x6863;&#x51FA;&#x9519;&#x65F6;&#x540E;&#x9762;&#x7684;&#x6240;&#x6709;&#x6587;&#x6863;&#x90FD;&#x4E0D;&#x4F1A;&#x88AB;&#x5199;&#x5165;&#x3002;&#x8BBE;&#x4E3A; false &#x65F6;&#xFF0C;&#x4E0D;&#x6309;&#x987A;&#x5E8F;&#x5199;&#x5165;&#xFF0C;&#x4F46;&#x5199;&#x5165;&#x6548;&#x7387;&#x8F83;&#x9AD8;&#xFF0C;&#x524D;&#x9762;&#x7684;&#x6587;&#x6863;&#x51FA;&#x9519;&#xFF0C;&#x540E;&#x9762;&#x6240;&#x6709;&#x6587;&#x6863;&#x4F1A;&#x88AB;&#x7EE7;&#x7EED;&#x5199;&#x5165;&#x3002;</li>
+</ul>
+<h2 id="&#x67E5;"><a name="&#x67E5;" class="anchor-navigation-ex-anchor" href="#&#x67E5;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x67E5;</h2>
+<h3 id="&#x8FC7;&#x6EE4;&#x6570;&#x636E;"><a name="&#x8FC7;&#x6EE4;&#x6570;&#x636E;" class="anchor-navigation-ex-anchor" href="#&#x8FC7;&#x6EE4;&#x6570;&#x636E;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. &#x8FC7;&#x6EE4;&#x6570;&#x636E;</h3>
+<p><strong>1. <code>db.&lt;collection&gt;.find(&lt;query&gt;, &lt;projection&gt;)</code></strong></p>
+<ul>
+<li>query&#xFF1A;&#x67E5;&#x8BE2;&#x7684;&#x6761;&#x4EF6;</li>
+<li>projection&#xFF1A;&#x6295;&#x5F71;&#x6587;&#x6863;&#xFF0C;&#x89C4;&#x5B9A;&#x67E5;&#x8BE2;&#x7684;&#x7ED3;&#x679C;&#x4E2D;&#x663E;&#x793A;&#x54EA;&#x4E9B;&#x5B57;&#x6BB5;&#xFF0C;&#x9ED8;&#x8BA4;&#x90FD;&#x4E3A;1&#xFF0C;&#x4E0D;&#x663E;&#x793A;&#x5B57;&#x6BB5;&#x7684;&#x8BBE;&#x4E3A; 0</li>
+</ul>
+<blockquote>
+<p>&#x6295;&#x5F71;&#x7684;&#x6761;&#x4EF6;&#x4E0D;&#x80FD;&#x540C;&#x65F6;&#x5305;&#x542B; 0 &#x548C; 1&#xFF08;<code>_id</code> &#x4E0D;&#x53D7;&#x9650;&#x5236;&#xFF09;&#xFF0C;&#x5982;&#x4E0D;&#x80FD;&#x4E3A; <code>db.getCollection(&apos;person&apos;).find({}, {age: 0, name: 1});</code></p>
+</blockquote>
+<h3 id="&#x6BD4;&#x8F83;&#x64CD;&#x4F5C;&#x7B26;"><a name="&#x6BD4;&#x8F83;&#x64CD;&#x4F5C;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x6BD4;&#x8F83;&#x64CD;&#x4F5C;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. &#x6BD4;&#x8F83;&#x64CD;&#x4F5C;&#x7B26;</h3>
+<ul>
+<li><code>$eq</code>&#xFF1A;&#x7B49;&#x4E8E;</li>
+<li><code>$ne</code>&#xFF1A;&#x4E0D;&#x7B49;&#x4E8E;&#xFF08;&#x4E0D;&#x5B58;&#x5728;&#x9700;&#x8981;&#x5224;&#x65AD;&#x7684;&#x5B57;&#x6BB5;&#x4E5F;&#x7B97;&#x4F5C;&#x4E0D;&#x7B49;&#x4E8E;&#xFF09;</li>
+<li><code>$gt</code>&#xFF1A;&#x5927;&#x4E8E;</li>
+<li><code>$gte</code>&#xFF1A;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;</li>
+<li><code>$lt</code>&#xFF1A;&#x5C0F;&#x4E8E;</li>
+<li><code>$lte</code>&#xFF1A;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;</li>
+</ul>
+<pre><code class="lang-js">db.&lt;collection&gt;.find({name: {$ne: <span class="hljs-string">&quot;Zander&quot;</span>}});
+</code></pre>
+<ul>
+<li><code>$in</code>&#xFF1A;&#x5339;&#x914D;&#x548C;&#x4EFB;&#x610F;&#x6307;&#x5B9A;&#x503C;&#x76F8;&#x7B49;&#x7684;&#x6587;&#x6863;&#xFF0C;&#x503C;&#x4E3A;&#x6570;&#x7EC4;</li>
+<li><code>$nin</code>&#xFF1A;&#x5339;&#x914D;&#x548C;&#x4EFB;&#x610F;&#x6307;&#x5B9A;&#x503C;&#x90FD;&#x4E0D;&#x76F8;&#x7B49;&#x7684;&#x6587;&#x6863;&#xFF0C;&#x503C;&#x4E3A;&#x6570;&#x7EC4;&#xFF08;&#x4E0D;&#x5B58;&#x5728;&#x9700;&#x8981;&#x5224;&#x65AD;&#x7684;&#x5B57;&#x6BB5;&#x4E5F;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#xFF09;</li>
+</ul>
+<pre><code class="lang-js">db.&lt;collection&gt;.find({name: {$<span class="hljs-keyword">in</span>: [<span class="hljs-string">&quot;Zander&quot;</span>, <span class="hljs-string">&quot;Paul&quot;</span>, <span class="hljs-string">&quot;Leon&quot;</span>]}});
+</code></pre>
+<h3 id="&#x903B;&#x8F91;&#x64CD;&#x4F5C;&#x7B26;"><a name="&#x903B;&#x8F91;&#x64CD;&#x4F5C;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x903B;&#x8F91;&#x64CD;&#x4F5C;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>3.3. &#x903B;&#x8F91;&#x64CD;&#x4F5C;&#x7B26;</h3>
+<p>&#x903B;&#x8F91;&#x64CD;&#x4F5C;&#x7B26;&#x540E;&#x9700;&#x4E3A;&#x4E00;&#x4E2A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x6216;&#x5BF9;&#x8C61;&#x3002;</p>
+<ul>
+<li><code>$not</code>&#xFF1A;&#x975E;&#xFF08;&#x4E0D;&#x5B58;&#x5728;&#x9700;&#x8981;&#x5224;&#x65AD;&#x7684;&#x5B57;&#x6BB5;&#x4E5F;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#xFF09;</li>
+<li><code>$and</code>&#xFF1A;&#x4E14;</li>
+<li><code>$or</code>&#xFF1A;&#x6216;</li>
+<li><code>$nor</code>&#xFF1A;&#x90FD;&#x4E0D;&#xFF08;&#x4E0D;&#x5B58;&#x5728;&#x9700;&#x8981;&#x5224;&#x65AD;&#x7684;&#x5B57;&#x6BB5;&#x4E5F;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#xFF09;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x67E5;&#x8BE2;&#x6240;&#x6709;&#x540D;&#x5B57;&#x4E0D;&#x4E3A; Zander &#x7684;</span>
+db.person.find({name: {$not: {$eq: <span class="hljs-string">&quot;Zander&quot;</span>}}});
+
+<span class="hljs-comment">// &#x4E14;</span>
+db.person.find({$and: [{name: <span class="hljs-string">&quot;Zander&quot;</span>, age: <span class="hljs-number">18</span>}]});
+
+<span class="hljs-comment">// &#x6216;</span>
+db.person.find({$or: [{name: <span class="hljs-string">&quot;Zander&quot;</span>}, {name: <span class="hljs-string">&quot;Hello&quot;</span>}]})
+
+<span class="hljs-comment">// not or &#x90FD;&#x4E0D;</span>
+db.person.find({$nor: [{name: <span class="hljs-string">&quot;Zander&quot;</span>}, {name: <span class="hljs-string">&quot;Hello&quot;</span>}]})
+</code></pre>
+<h3 id="&#x5B57;&#x6BB5;&#x64CD;&#x4F5C;&#x7B26;"><a name="&#x5B57;&#x6BB5;&#x64CD;&#x4F5C;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x6BB5;&#x64CD;&#x4F5C;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>3.4. &#x5B57;&#x6BB5;&#x64CD;&#x4F5C;&#x7B26;</h3>
+<ul>
+<li><code>$exists</code>&#xFF1A;&#x67E5;&#x8BE2;&#x5305;&#x542B;&#x67D0;&#x4E2A;&#x5B57;&#x6BB5;&#x7684;&#x6587;&#x6863;</li>
+</ul>
+<blockquote>
+<p>&#x53EF;&#x914D;&#x5408; $ne&#x3001;$nin&#x3001;$nor&#x3001;$not &#x6E05;&#x7406;&#x6570;&#x636E;</p>
+</blockquote>
+<pre><code class="lang-js">db.person.find({name: {$ne: <span class="hljs-string">&apos;Zander&apos;</span>, $exists: <span class="hljs-literal">true</span>}})
+</code></pre>
+<ul>
+<li><code>$type</code>&#xFF1A;&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x5B57;&#x6BB5;&#x5305;&#x542B;&#x6307;&#x5B9A;&#x7C7B;&#x578B;&#x7684;&#x6587;&#x6863;</li>
+</ul>
+<pre><code class="lang-js">db.person.find({age :{$type: <span class="hljs-string">&apos;number&apos;</span>}})
+</code></pre>
+<h3 id="&#x6570;&#x7EC4;&#x64CD;&#x4F5C;&#x7B26;"><a name="&#x6570;&#x7EC4;&#x64CD;&#x4F5C;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x7EC4;&#x64CD;&#x4F5C;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>3.5. &#x6570;&#x7EC4;&#x64CD;&#x4F5C;&#x7B26;</h3>
+<ul>
+<li><code>$all</code>&#xFF1A;&#x5339;&#x914D;&#x6570;&#x7EC4;&#x5B57;&#x6BB5;&#x5305;&#x542B;&#x6307;&#x5B9A;&#x6570;&#x7EC4;&#x5185;&#x6240;&#x6709;&#x5143;&#x7D20;&#x7684;&#x6587;&#x6863;</li>
+</ul>
+<pre><code class="lang-js">db.getCollection(<span class="hljs-string">&apos;person&apos;</span>).find({book: {$all: [<span class="hljs-string">&quot;a&quot;</span>, <span class="hljs-string">&quot;b&quot;</span>]}})
+</code></pre>
+<ul>
+<li><code>$is</code>&#xFF1A;&#x5339;&#x914D;&#x6570;&#x7EC4;&#x5B57;&#x6BB5;&#x4E2D;&#x81F3;&#x5C11;&#x6709;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7B26;&#x5408;&#x591A;&#x4E2A;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x7684;&#x6587;&#x6863;</li>
+</ul>
+<pre><code class="lang-js">db.getCollection(<span class="hljs-string">&apos;person&apos;</span>).find({students: {$elemMatch: {name: <span class="hljs-string">&quot;Zander&quot;</span>, age: <span class="hljs-number">18</span>}}})
+</code></pre>
+<h3 id="&#x8FD0;&#x7B97;&#x64CD;&#x4F5C;&#x7B26;"><a name="&#x8FD0;&#x7B97;&#x64CD;&#x4F5C;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x8FD0;&#x7B97;&#x64CD;&#x4F5C;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>3.6. &#x8FD0;&#x7B97;&#x64CD;&#x4F5C;&#x7B26;</h3>
+<ul>
+<li><code>$regex</code>&#xFF1A;&#x67E5;&#x8BE2;&#x6EE1;&#x8DB3;&#x6B63;&#x5219;&#x7684;&#x6587;&#x6863;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x5339;&#x914D; name &#x4EE5; z/Z &#x5F00;&#x5934;&#x7684;&#x6587;&#x6863;&#xFF0C;i &#x8868;&#x793A;&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;</span>
+db.getCollection(<span class="hljs-string">&apos;person&apos;</span>).find({name: {$regex: <span class="hljs-regexp">/^z/</span>, $options: <span class="hljs-string">&apos;i&apos;</span>}})
+<span class="hljs-comment">// or</span>
+db.getCollection(<span class="hljs-string">&apos;person&apos;</span>).find({name: {$regex: <span class="hljs-regexp">/^z/i</span>}})
+</code></pre>
+<h3 id="&#x6587;&#x6863;&#x6E38;&#x6807;"><a name="&#x6587;&#x6863;&#x6E38;&#x6807;" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x6863;&#x6E38;&#x6807;"><i class="fa fa-link" aria-hidden="true"></i></a>3.7. &#x6587;&#x6863;&#x6E38;&#x6807;</h3>
+<p><code>find()</code> &#x65B9;&#x6CD5;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F;&#x4E00;&#x4E2A;&#x6587;&#x6863;&#x6E38;&#x6807;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E; C &#x8BED;&#x8A00;&#x7684;&#x6307;&#x9488;&#xFF0C;&#x6587;&#x6863;&#x6E38;&#x6807;&#x7684;&#x65B9;&#x6CD5;&#x6709;&#xFF1A;</p>
+<ul>
+<li>hasNext()&#xFF1A;&#x5224;&#x65AD;&#x662F;&#x5426;&#x8FD8;&#x6709;&#x4E0B;&#x4E00;&#x4E2A;&#x6587;&#x6863;</li>
+<li>next()&#xFF1A;&#x53D6;&#x51FA;&#x4E0B;&#x4E00;&#x4E2A;&#x6587;&#x6863;</li>
+<li>forEach()&#xFF1A;&#x4F9D;&#x6B21;&#x53D6;&#x51FA;&#x6240;&#x6709;&#x6587;&#x6863;</li>
+</ul>
+<h3 id="&#x5206;&#x9875;&#x51FD;&#x6570;"><a name="&#x5206;&#x9875;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x5206;&#x9875;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>3.8. &#x5206;&#x9875;&#x51FD;&#x6570;</h3>
+<ul>
+<li>cursor.limit()&#xFF1A;&#x53D6;&#x51FA;&#x6587;&#x6863;&#x7684;&#x6570;&#x91CF;</li>
+<li>cursor.skip()&#xFF1A;&#x8DF3;&#x8FC7;&#x6587;&#x6863;&#x7684;&#x6570;&#x91CF;</li>
+</ul>
+<h3 id="&#x6392;&#x5E8F;&#x51FD;&#x6570;"><a name="&#x6392;&#x5E8F;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x6392;&#x5E8F;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>3.9. &#x6392;&#x5E8F;&#x51FD;&#x6570;</h3>
+<ul>
+<li><code>cursor.sort({field: ordering})</code>&#xFF1A;&#x6309;&#x7167;&#x6307;&#x5B9A;&#x89C4;&#x5219;&#x6392;&#x5E8F;<ul>
+<li>ordering &#x4E3A;1&#x8868;&#x793A;&#x5347;&#x5E8F;&#xFF0C;&#x4E3A;-1&#x8868;&#x793A;&#x964D;&#x5E8F;</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>sort &#x548C; limit/skip &#x540C;&#x65F6;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x65E0;&#x8BBA; sort &#x5199;&#x5728;&#x524D;&#x9762;&#x8FD8;&#x662F;&#x540E;&#x9762;&#x90FD;&#x4F1A;&#x5148;&#x6267;&#x884C; sort&#x3002;</p>
+</blockquote>
+<h3 id="&#x7EDF;&#x8BA1;&#x51FD;&#x6570;"><a name="&#x7EDF;&#x8BA1;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x7EDF;&#x8BA1;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>3.10. &#x7EDF;&#x8BA1;&#x51FD;&#x6570;</h3>
+<ul>
+<li>count()&#xFF1A;&#x7EDF;&#x8BA1;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x7684;&#x6570;&#x76EE;</li>
+</ul>
+<p>&#x53EF;&#x63A5;&#x6536;&#x4E00;&#x4E2A; <code>applySkipLimit</code> &#x53C2;&#x6570;&#xFF0C;&#x8868;&#x793A;&#x7EDF;&#x8BA1;&#x6570;&#x76EE;&#x65F6;&#x662F;&#x5426;&#x5FFD;&#x7565; skip &#x548C; limit&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; false&#xFF0C;&#x8868;&#x793A;&#x5FFD;&#x7565; skip &#x548C; limit &#x67E5;&#x8BE2;&#x603B;&#x6570;&#x3002;</p>
+<pre><code class="lang-js">db.getCollection(<span class="hljs-string">&apos;person&apos;</span>).find({}).limit(<span class="hljs-number">5</span>).sort({age: <span class="hljs-number">1</span>}).count({applySkipLimit: <span class="hljs-literal">true</span>})
+</code></pre>
+<h2 id="&#x6539;"><a name="&#x6539;" class="anchor-navigation-ex-anchor" href="#&#x6539;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x6539;</h2>
+<h3 id="&#x66F4;&#x65B0;&#x6587;&#x6863;&#x7684;&#x65B9;&#x6CD5;"><a name="&#x66F4;&#x65B0;&#x6587;&#x6863;&#x7684;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x66F4;&#x65B0;&#x6587;&#x6863;&#x7684;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>4.1. &#x66F4;&#x65B0;&#x6587;&#x6863;&#x7684;&#x65B9;&#x6CD5;</h3>
+<p><strong>1. <code>db.&lt;collection&gt;.save()</code></strong></p>
+<p>&#x5F53;&#x6CA1;&#x6709;&#x6307;&#x5B9A; <code>_id</code> &#x5B57;&#x6BB5;&#x65F6;&#x4E3A;&#x65B0;&#x589E;&#xFF0C;&#x5982;&#x679C;&#x6307;&#x5B9A;&#x4E86;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684; <code>_id</code> &#x5219;&#x8986;&#x76D6;&#x539F;&#x6587;&#x6863;&#x3002;</p>
+<p><strong>2. <code>db.&lt;collection&gt;.update(&lt;filter&gt;, &lt;update&gt;, &lt;options&gt;)</code></strong></p>
+<ul>
+<li><code>&lt;filter&gt;</code>&#xFF1A;&#x7B5B;&#x9009;&#x6761;&#x4EF6;</li>
+<li><code>&lt;update&gt;</code>&#xFF1A;&#x65B0;&#x7684;&#x5185;&#x5BB9;</li>
+<li><code>&lt;options&gt;</code>&#xFF1A;&#x914D;&#x7F6E;&#x9879;</li>
+</ul>
+<blockquote>
+<p>&#x9ED8;&#x8BA4;&#x4F1A;&#x8986;&#x76D6;&#x539F;&#x6587;&#x6863;&#xFF0C;&#x82E5;&#x8981;&#x53EA;&#x66F4;&#x65B0;&#xFF0C;&#x5219;&#x9700;&#x4F7F;&#x7528;&#x66F4;&#x65B0;&#x64CD;&#x4F5C;&#x7B26;&#x3002;</p>
+<p>&#x9ED8;&#x8BA4;&#x53EA;&#x66F4;&#x65B0;&#x6EE1;&#x8DB3;&#x7B5B;&#x9009;&#x6761;&#x4EF6;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x6587;&#x6863;&#xFF0C;&#x82E5;&#x8981;&#x66F4;&#x65B0;&#x6240;&#x6709;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x7684;&#x6587;&#x6863;&#x9700;&#x6307;&#x5B9A;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570; <code>{ multi: true}</code>&#xFF0C;&#x540C;&#x65F6;&#x5728;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E2D;&#x5FC5;&#x987B;&#x4F7F;&#x7528;&#x66F4;&#x65B0;&#x64CD;&#x4F5C;&#x7B26;</p>
+<p>&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E2D;&#x5982;&#x679C;&#x6307;&#x5B9A;&#x4E86; <code>_id</code>&#xFF0C;&#x5219;&#x5FC5;&#x987B;&#x4E0E;&#x539F;&#x6587;&#x6863;&#x53D6;&#x503C;&#x4E00;&#x81F4;&#xFF0C;&#x5426;&#x5219;&#x62A5;&#x9519;&#x65E0;&#x6CD5;&#x66F4;&#x65B0;&#xFF08;&#x4E00;&#x822C;&#x4E0D;&#x6307;&#x5B9A; <code>_id</code>&#xFF09;</p>
+</blockquote>
+<p><strong>3. <code>db.&lt;collection&gt;.findAndModify()</code></strong></p>
+<h3 id="&#x66F4;&#x65B0;&#x64CD;&#x4F5C;&#x7B26;"><a name="&#x66F4;&#x65B0;&#x64CD;&#x4F5C;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x66F4;&#x65B0;&#x64CD;&#x4F5C;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>4.2. &#x66F4;&#x65B0;&#x64CD;&#x4F5C;&#x7B26;</h3>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B; update &#x4F1A;&#x76F4;&#x63A5;&#x8986;&#x76D6;&#x65E7;&#x6587;&#x6863;&#xFF0C;&#x4F7F;&#x7528;&#x66F4;&#x65B0;&#x64CD;&#x4F5C;&#x7B26;&#x53EF;&#x66F4;&#x65B0;&#x6587;&#x6863;&#x5185;&#x7279;&#x5B9A;&#x7684;&#x5B57;&#x6BB5;&#x3002;</p>
+<p><strong>1. $set</strong></p>
+<p>&#x66F4;&#x65B0;&#x6216;&#x65B0;&#x589E;&#x5B57;&#x6BB5;&#xFF0C;&#x5B57;&#x6BB5;&#x5B58;&#x5728;&#x5219;&#x66F4;&#x65B0;&#xFF0C;&#x4E0D;&#x5B58;&#x5728;&#x5219;&#x65B0;&#x589E;&#x3002;</p>
+<pre><code class="lang-js">db.getCollection(<span class="hljs-string">&apos;person&apos;</span>).update({name: <span class="hljs-string">&quot;Tony&quot;</span>}, {$set: {age: <span class="hljs-number">99</span>, book: <span class="hljs-string">&quot;her&quot;</span>}})
+</code></pre>
+<p><strong>2. $unset</strong></p>
+<p>&#x5220;&#x9664;&#x5B57;&#x6BB5;&#xFF0C;&#x5B57;&#x6BB5;&#x7684;&#x503C;&#x65E0;&#x5173;&#x7D27;&#x8981;&#x3002;</p>
+<pre><code class="lang-js">db.getCollection(<span class="hljs-string">&apos;person&apos;</span>).update({name: <span class="hljs-string">&quot;Tony&quot;</span>}, {$unset: {<span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-string">&quot;&quot;</span>}})
+</code></pre>
+<blockquote>
+<p>&#x5982;&#x679C;&#x5220;&#x9664;&#x7684;&#x662F;&#x6570;&#x7EC4;&#x5B57;&#x6BB5;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x800C;&#x662F;&#x4F7F;&#x7528; null &#x66FF;&#x6362;&#x5220;&#x9664;&#x7684;&#x5185;&#x5BB9;</p>
+</blockquote>
+<p><strong>3. $rename</strong></p>
+<p>&#x91CD;&#x547D;&#x540D;&#x5B57;&#x6BB5;&#x3002;</p>
+<pre><code class="lang-js">db.getCollection(<span class="hljs-string">&apos;person&apos;</span>).update({name: <span class="hljs-string">&quot;Tony&quot;</span>}, {$rename: {<span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&quot;first_name&quot;</span>}})
+</code></pre>
+<blockquote>
+<p>&#x5982;&#x679C;&#x6587;&#x6863;&#x91CC;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x65B0;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x5219;&#x4F1A;&#x5220;&#x9664;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;&#x5B57;&#x6BB5;</p>
+<p>&#x4E0D;&#x80FD;&#x901A;&#x8FC7; $rename &#x6765;&#x64CD;&#x4F5C;&#x6570;&#x7EC4;&#x5185;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x540D;</p>
+</blockquote>
+<ul>
+<li>&#x4F7F;&#x7528;&#x6280;&#x5DE7;&#xFF1A;</li>
+</ul>
+<p>&#x53EF;&#x5C06;&#x5185;&#x5C42;&#x6587;&#x6863;&#x4E2D;&#x7684;&#x5B57;&#x6BB5;&#x8F6C;&#x79FB;&#x5230;&#x5916;&#x5C42;&#xFF0C;&#x6216;&#x5C06;&#x5916;&#x5C42;&#x8F6C;&#x79FB;&#x5230;&#x5185;&#x5C42;&#xFF1A;</p>
+<pre><code class="lang-js">db.getCollection(<span class="hljs-string">&apos;person&apos;</span>).update({name: <span class="hljs-string">&quot;Tony&quot;</span>}, {$rename: {<span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-string">&quot;obj.age&quot;</span>}})
+</code></pre>
+<p><strong>4. $inc</strong></p>
+<p>&#x66F4;&#x65B0;&#x5B57;&#x6BB5;&#x503C;&#xFF08;&#x589E;&#x52A0;&#x6216;&#x51CF;&#x5C11;&#x5B57;&#x6BB5;&#x7684;&#x503C;&#xFF09;&#xFF0C;&#x53EA;&#x80FD;&#x64CD;&#x4F5C; Number &#x7C7B;&#x578B;&#x7684;&#x5B57;&#x6BB5;&#x3002;</p>
+<pre><code class="lang-js">db.getCollection(<span class="hljs-string">&apos;person&apos;</span>).update({name: <span class="hljs-string">&quot;Tony&quot;</span>}, {$inc: {<span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">2</span>}})
+
+db.getCollection(<span class="hljs-string">&apos;person&apos;</span>).update({name: <span class="hljs-string">&quot;Tony&quot;</span>}, {$inc: {<span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">-5</span>}})
+</code></pre>
+<blockquote>
+<p>&#x82E5;&#x4E0D;&#x5B58;&#x5728;&#x8981;&#x64CD;&#x4F5C;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x5219;&#x65B0;&#x589E;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#xFF0C;&#x521D;&#x59CB;&#x503C;&#x4E3A;0&#x518D;&#x6267;&#x884C;&#x589E;&#x52A0;/&#x51CF;&#x5C11;&#x64CD;&#x4F5C;&#x3002;</p>
+</blockquote>
+<p><strong>5. $mul</strong></p>
+<p>&#x66F4;&#x65B0;&#x5B57;&#x6BB5;&#x503C;&#xFF08;&#x4E58;&#x4EE5;&#x6216;&#x9664;&#x4EE5;&#x5B57;&#x6BB5;&#x7684;&#x503C;&#xFF09;&#xFF0C;&#x53EA;&#x80FD;&#x64CD;&#x4F5C; Number &#x7C7B;&#x578B;&#x7684;&#x5B57;&#x6BB5;&#x3002;</p>
+<p><strong>6. $min</strong></p>
+<p>&#x66F4;&#x65B0;&#x503C;&#x65F6;&#x4FDD;&#x5B58;&#x8F83;&#x5C0F;&#x7684;&#x503C;&#x3002;</p>
+<pre><code class="lang-js">db.getCollection(<span class="hljs-string">&apos;person&apos;</span>).update({name: <span class="hljs-string">&quot;Zander&quot;</span>}, {$min: {<span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">1</span>}})
+</code></pre>
+<blockquote>
+<p>&#x5982;&#x679C;&#x8981;&#x64CD;&#x4F5C;&#x7684;&#x5B57;&#x6BB5;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x81EA;&#x52A8;&#x589E;&#x52A0;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#x5E76;&#x5C06;&#x503C;&#x8D4B;&#x7ED9;&#x5B83;&#x3002;</p>
+</blockquote>
+<p><strong>6. $max</strong></p>
+<p>&#x66F4;&#x65B0;&#x503C;&#x65F6;&#x4FDD;&#x5B58;&#x8F83;&#x5927;&#x7684;&#x503C;&#x3002;</p>
+<p><strong>7. $addToSet</strong></p>
+<p>&#x5411;&#x6570;&#x7EC4;&#x5B57;&#x6BB5;&#x4E2D;&#x6DFB;&#x52A0;&#x5143;&#x7D20;&#x3002;</p>
+<pre><code class="lang-js">db.getCollection(<span class="hljs-string">&apos;person&apos;</span>).update({name: <span class="hljs-string">&quot;Zander&quot;</span>}, {$addToSet: {<span class="hljs-string">&quot;book&quot;</span>: <span class="hljs-string">&quot;&#x91D1;&#x74F6;&#x6885;&quot;</span>}})
+</code></pre>
+<blockquote>
+<p>&#x5982;&#x679C;&#x8981;&#x64CD;&#x4F5C;&#x7684;&#x5B57;&#x6BB5;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x81EA;&#x52A8;&#x589E;&#x52A0;&#x8FD9;&#x4E2A;&#x6570;&#x7EC4;&#x5B57;&#x6BB5;&#x5E76;&#x5411;&#x6570;&#x7EC4;&#x4E2D;&#x6DFB;&#x52A0;&#x5143;&#x7D20;&#x3002;</p>
+<p>&#x6DFB;&#x52A0;&#x7684;&#x5143;&#x7D20;&#x4F1A;&#x81EA;&#x52A8;&#x53BB;&#x91CD;&#x3002;</p>
+</blockquote>
+<p><strong>8. $push</strong></p>
+<p>&#x5411;&#x6570;&#x7EC4;&#x5B57;&#x6BB5;&#x4E2D;&#x6DFB;&#x52A0;&#x5143;&#x7D20;&#xFF08;&#x4E0D;&#x53BB;&#x91CD;&#xFF09;&#x3002;</p>
+<p><strong>9. $pop</strong></p>
+<p>&#x4ECE;&#x6570;&#x7EC4;&#x4E2D;&#x5220;&#x9664;&#x5143;&#x7D20;&#xFF0C;&#x4F20;1&#x8868;&#x793A;&#x5220;&#x9664;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x4F20;-1&#x8868;&#x793A;&#x5220;&#x9664;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x3002;</p>
+<pre><code class="lang-js">db.getCollection(<span class="hljs-string">&apos;person&apos;</span>).update({name: <span class="hljs-string">&quot;Zander&quot;</span>}, {$pop: {<span class="hljs-string">&quot;book_name&quot;</span>: <span class="hljs-number">-1</span>}})
+</code></pre>
+<p><strong>10. $pull</strong></p>
+<p>&#x4ECE;&#x6570;&#x7EC4;&#x4E2D;&#x5220;&#x9664;&#x6307;&#x5B9A;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x5177;&#x4F53;&#x7684;&#x503C;&#x6216;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x3002;</p>
+<pre><code class="lang-js">db.getCollection(<span class="hljs-string">&apos;person&apos;</span>).update({name: <span class="hljs-string">&quot;Zander&quot;</span>}, {$pull: {<span class="hljs-string">&quot;book_name&quot;</span>: <span class="hljs-string">&quot;123&quot;</span>}}) <span class="hljs-comment">// &#x6307;&#x5B9A;&#x5143;&#x7D20;&#x7684;&#x503C;</span>
+
+db.getCollection(<span class="hljs-string">&apos;person&apos;</span>).update({name: <span class="hljs-string">&quot;Zander&quot;</span>}, {$pull: {<span class="hljs-string">&quot;book_name&quot;</span>: <span class="hljs-regexp">/^1/</span>}}) <span class="hljs-comment">// &#x6307;&#x5B9A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</span>
+</code></pre>
+<blockquote>
+<p>&#x5982;&#x679C;&#x8981;&#x5220;&#x9664;&#x7684;&#x6570;&#x7EC4;&#x5185;&#x7684;&#x5143;&#x7D20;&#x662F; Object &#x7C7B;&#x578B;&#xFF0C;&#x53EA;&#x8981;&#x5339;&#x914D;&#x5230;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x5C31;&#x53EF;&#x5220;&#x9664;&#x6574;&#x4E2A;&#x5BF9;&#x8C61;&#x3002;</p>
+</blockquote>
+<p><strong>11. $pullAll</strong></p>
+<p>&#x4ECE;&#x6570;&#x7EC4;&#x4E2D;&#x6279;&#x91CF;&#x5220;&#x9664;&#x7279;&#x5B9A;&#x5143;&#x7D20;&#x3002;</p>
+<pre><code class="lang-js">db.getCollection(<span class="hljs-string">&apos;person&apos;</span>).update({name: <span class="hljs-string">&quot;Dom&quot;</span>}, {$pullAll: {book: [<span class="hljs-string">&quot;&#x4E09;&#x56FD;&quot;</span>, <span class="hljs-string">&quot;&#x897F;&#x6E38;&quot;</span>]}})
+</code></pre>
+<blockquote>
+<p>&#x5982;&#x679C;&#x8981;&#x5220;&#x9664;&#x7684;&#x6570;&#x7EC4;&#x5185;&#x7684;&#x5143;&#x7D20;&#x662F; Array &#x7C7B;&#x578B;&#x6216;&#x8005; Object &#x7C7B;&#x578B;&#xFF0C;&#x5143;&#x7D20;&#x7684;&#x987A;&#x5E8F;&#x548C;&#x503C;&#x5FC5;&#x987B;&#x4E00;&#x6478;&#x4E00;&#x6837;&#x624D;&#x53EF;&#x5220;&#x9664;&#x3002;</p>
+</blockquote>
+<p><strong>12. $&#x548C;$[]</strong></p>
+<ul>
+<li>$&#xFF1A;&#x66F4;&#x65B0;&#x6570;&#x7EC4;&#x4E2D;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x7684;&#x7279;&#x5B9A;&#x5143;&#x7D20;</li>
+</ul>
+<pre><code class="lang-js">db.getCollection(<span class="hljs-string">&apos;person&apos;</span>).update({name: <span class="hljs-string">&quot;Dom&quot;</span>, <span class="hljs-string">&quot;book.name&quot;</span>: <span class="hljs-string">&quot;&#x897F;&#x6E38;&quot;</span>}, {$set: {<span class="hljs-string">&quot;book.$.name&quot;</span>: <span class="hljs-string">&quot;&#x6C34;&#x6D52;&quot;</span>}}) <span class="hljs-comment">// &#x66F4;&#x65B0;&#x6570;&#x7EC4;&#x4E2D;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x503C;</span>
+</code></pre>
+<ul>
+<li>$[]&#xFF1A;&#x66F4;&#x65B0;&#x6570;&#x7EC4;&#x4E2D;&#x6240;&#x6709;&#x5143;&#x7D20;</li>
+</ul>
+<pre><code class="lang-js">db.getCollection(<span class="hljs-string">&apos;person&apos;</span>).update({name: <span class="hljs-string">&quot;Zander&quot;</span>}, {$set: {<span class="hljs-string">&quot;book_name.$[]&quot;</span>: <span class="hljs-string">&quot;&#x6C34;&#x6D52;&quot;</span>}})
+</code></pre>
+<h2 id="&#x5220;"><a name="&#x5220;" class="anchor-navigation-ex-anchor" href="#&#x5220;"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x5220;</h2>
+<p><strong>1. &#x5220;&#x9664;&#x6240;&#x6709;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x7684;&#x6570;&#x636E;</strong></p>
+<pre><code class="lang-js">db.getCollection(<span class="hljs-string">&apos;person&apos;</span>).remove({name: <span class="hljs-string">&quot;Zander&quot;</span>})
+</code></pre>
+<p><strong>2. &#x5220;&#x9664;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x7684;&#x7B2C;&#x4E00;&#x6761;&#x6570;&#x636E;</strong></p>
+<pre><code class="lang-js">db.getCollection(<span class="hljs-string">&apos;person&apos;</span>).remove({name: <span class="hljs-string">&quot;Zander&quot;</span>}, {justOne: <span class="hljs-literal">true</span>})
+</code></pre>
+<h2 id="&#x805A;&#x5408;&#x64CD;&#x4F5C;"><a name="&#x805A;&#x5408;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x805A;&#x5408;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>6. &#x805A;&#x5408;&#x64CD;&#x4F5C;</h2>
+<p>&#x805A;&#x5408;&#x64CD;&#x4F5C;&#x5C31;&#x662F;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x5B8C;&#x6210;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x805A;&#x5408;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x64CD;&#x4F5C;&#x6210;&#x4E3A;&#x4E00;&#x4E2A;&#x9636;&#x6BB5;&#xFF0C;&#x4E0A;&#x4E00;&#x9636;&#x6BB5;&#x4F1A;&#x5C06;&#x5904;&#x7406;&#x7684;&#x7ED3;&#x679C;&#x4F20;&#x7ED9;&#x4E0B;&#x4E00;&#x4E2A;&#x9636;&#x6BB5;&#x7EE7;&#x7EED;&#x5904;&#x7406;&#x3002;</p>
+<h3 id="project"><a name="project" class="anchor-navigation-ex-anchor" href="#project"><i class="fa fa-link" aria-hidden="true"></i></a>6.1. $project</h3>
+<ul>
+<li>&#x4F5C;&#x7528;&#xFF1A;&#x5BF9;&#x8F93;&#x5165;&#x7684;&#x6587;&#x6863;&#x8FDB;&#x884C;&#x518D;&#x6B21;&#x6295;&#x5F71;&#xFF0C;&#x6309;&#x7167;&#x9700;&#x8981;&#x7684;&#x683C;&#x5F0F;&#x751F;&#x6210;&#x7ED3;&#x679C;</li>
+<li>&#x683C;&#x5F0F;&#xFF1A;<code>{$project: { field: value }}</code></li>
+</ul>
+<blockquote>
+<p>&#x5982;&#x679C;&#x5728; $project &#x64CD;&#x4F5C;&#x4E2D;&#x4F7F;&#x7528;&#x4E86;&#x539F;&#x6587;&#x6863;&#x4E2D;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x5B57;&#x6BB5;&#x5219;&#x81EA;&#x52A8;&#x6DFB;&#x52A0;&#xFF0C;&#x4F7F;&#x7528; null &#x586B;&#x5145;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-js">db.getCollection(<span class="hljs-string">&apos;person&apos;</span>).aggregate([
+    {
+        $project: {
+            _id: <span class="hljs-number">0</span>,
+            my_name: <span class="hljs-string">&quot;$name&quot;</span>
+         }
+     }
+])
+</code></pre>
+<h3 id="macth"><a name="macth" class="anchor-navigation-ex-anchor" href="#macth"><i class="fa fa-link" aria-hidden="true"></i></a>6.2. $macth</h3>
+<ul>
+<li>&#x4F5C;&#x7528;&#xFF1A;&#x7528;&#x4E8E;&#x7B5B;&#x9009;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x6587;&#x6863;</li>
+<li>&#x683C;&#x5F0F;&#xFF1A;<code>{$match:{ field: value }}</code></li>
+</ul>
+<h3 id="limit-&#x548C;-skip"><a name="limit-&#x548C;-skip" class="anchor-navigation-ex-anchor" href="#limit-&#x548C;-skip"><i class="fa fa-link" aria-hidden="true"></i></a>6.3. $limit &#x548C; $skip</h3>
+<p><strong>1. $limit</strong></p>
+<ul>
+<li>&#x4F5C;&#x7528;&#xFF1A;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x83B7;&#x53D6;&#x7684;&#x6587;&#x6863;&#x6570;&#x76EE;</li>
+<li>&#x683C;&#x5F0F;&#xFF1A;<code>{$limit: &lt;number&gt;}</code></li>
+</ul>
+<p><strong>2. $skip</strong></p>
+<ul>
+<li>&#x4F5C;&#x7528;&#xFF1A;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x8DF3;&#x8FC7;&#x7684;&#x6587;&#x6863;&#x6570;&#x76EE;</li>
+<li>&#x683C;&#x5F0F;&#xFF1A;<code>{$skip: &lt;number&gt;}</code></li>
+</ul>
+<h3 id="unwind"><a name="unwind" class="anchor-navigation-ex-anchor" href="#unwind"><i class="fa fa-link" aria-hidden="true"></i></a>6.4. $unwind</h3>
+<ul>
+<li>&#x4F5C;&#x7528;&#xFF1A;&#x5C55;&#x5F00;&#x6570;&#x7EC4;&#x5B57;&#x6BB5;</li>
+<li>&#x683C;&#x5F0F;&#xFF1A;<code>$unwind: {path: &lt;$field&gt;}</code></li>
+<li>&#x53C2;&#x6570;&#xFF1A;<ul>
+<li><code>includeArrayIndex: &apos;index&apos;</code>&#xFF1A;&#x5728;&#x7ED3;&#x679C;&#x4E2D;&#x6DFB;&#x52A0;&#x6570;&#x7EC4;&#x7684;&#x7D22;&#x5F15;</li>
+<li><code>preserveNullAndEmptyArrays: true</code>&#xFF1A;&#x7A7A;&#x6570;&#x7EC4;&#x548C; null &#x4E5F;&#x62C6;&#x5206;</li>
+</ul>
+</li>
+</ul>
+<h3 id="sort"><a name="sort" class="anchor-navigation-ex-anchor" href="#sort"><i class="fa fa-link" aria-hidden="true"></i></a>6.5. $sort</h3>
+<ul>
+<li>&#x4F5C;&#x7528;&#xFF1A;&#x6392;&#x5E8F;</li>
+<li>&#x683C;&#x5F0F;&#xFF1A;<code>$sort: {&lt;field: 1&gt;}</code></li>
+</ul>
+<h3 id="lookup"><a name="lookup" class="anchor-navigation-ex-anchor" href="#lookup"><i class="fa fa-link" aria-hidden="true"></i></a>6.6. $lookup</h3>
+<ul>
+<li>&#x4F5C;&#x7528;&#xFF1A;&#x5173;&#x8054;&#x67E5;&#x8BE2;</li>
+<li><p>&#x683C;&#x5F0F;&#xFF1A;</p>
+<p>  &#x5173;&#x8054;&#x5F62;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-js">  {$lookup: {
+          form: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">&#x5173;&#x8054;&#x96C6;&#x5408;&#x540D;</span>&gt;</span>
+          localField: <span class="hljs-tag">&lt;<span class="hljs-name">&#x5F53;&#x524D;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x5B57;&#x6BB5;&#x540D;</span>&gt;</span>
+          foreignField: <span class="hljs-tag">&lt;<span class="hljs-name">&#x5173;&#x8054;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x5B57;&#x6BB5;&#x540D;</span>&gt;</span>
+          as: <span class="hljs-tag">&lt;<span class="hljs-name">&#x8F93;&#x51FA;&#x7684;&#x5B57;&#x6BB5;&#x540D;</span>&gt;</span>
+      }
+  }
+</span></code></pre>
+<p>  &#x4E0D;&#x5173;&#x8054;&#x5F62;&#x5F0F;&#xFF1A;</p>
+<pre><code>  {$lookup: {
+          form: &lt;&#x5173;&#x8054;&#x96C6;&#x5408;&#x540D;&gt;
+          let: { &#x5B9A;&#x4E49;&#x7ED9;&#x5173;&#x8054;&#x96C6;&#x5408;&#x7684;&#x805A;&#x5408;&#x64CD;&#x4F5C;&#x4F7F;&#x7528;&#x7684;&#x5F53;&#x524D;&#x96C6;&#x5408;&#x7684;&#x5E38;&#x91CF; }
+          pipeline: [&#x5173;&#x8054;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x805A;&#x5408;&#x64CD;&#x4F5C;]
+          as: &lt;&#x8F93;&#x51FA;&#x7684;&#x5B57;&#x6BB5;&#x540D;&gt;
+      }
+  }
+</code></pre></li>
+</ul>
+<h3 id="group"><a name="group" class="anchor-navigation-ex-anchor" href="#group"><i class="fa fa-link" aria-hidden="true"></i></a>6.7. $group</h3>
+<ul>
+<li>&#x4F5C;&#x7528;&#xFF1A;&#x5BF9;&#x6587;&#x6863;&#x8FDB;&#x884C;&#x5206;&#x7EC4;</li>
+<li>&#x683C;&#x5F0F;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-js">{$group: {
+    _id: &lt;&#x5206;&#x7EC4;&#x7684;&#x4F9D;&#x636E;&#x5B57;&#x6BB5;&gt;,
+    &lt;field&gt;: { &lt;&#x64CD;&#x4F5C;&gt; },
+    ...: ...
+  }
+}
+</code></pre>
+<h3 id="out"><a name="out" class="anchor-navigation-ex-anchor" href="#out"><i class="fa fa-link" aria-hidden="true"></i></a>6.8. $out</h3>
+<ul>
+<li>&#x4F5C;&#x7528;&#xFF1A;&#x5C06;&#x524D;&#x9762;&#x9636;&#x6BB5;&#x5904;&#x7406;&#x5B8C;&#x7684;&#x6587;&#x6863;&#x5199;&#x5165;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x96C6;&#x5408;</li>
+<li>&#x683C;&#x5F0F;&#xFF1A;<code>{$out: &lt;&#x96C6;&#x5408;&#x540D;&gt;}</code></li>
+</ul>
+<blockquote>
+<p>&#x82E5;&#x4E0D;&#x5B58;&#x5728;&#x8FD9;&#x4E2A;&#x96C6;&#x5408;&#xFF0C;&#x5219;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#xFF1B;&#x82E5;&#x5DF2;&#x5B58;&#x5728;&#x8FD9;&#x4E2A;&#x96C6;&#x5408;&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x8986;&#x76D6;&#x3002;</p>
+</blockquote>
+<h3 id="&#x805A;&#x5408;&#x64CD;&#x4F5C;&#x989D;&#x5916;&#x914D;&#x7F6E;"><a name="&#x805A;&#x5408;&#x64CD;&#x4F5C;&#x989D;&#x5916;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x805A;&#x5408;&#x64CD;&#x4F5C;&#x989D;&#x5916;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>6.9. &#x805A;&#x5408;&#x64CD;&#x4F5C;&#x989D;&#x5916;&#x914D;&#x7F6E;</h3>
+<pre><code class="lang-js">db.&lt;collection&gt;.aggregate(&lt;pipeline&gt;, &lt;options&gt;)
+</code></pre>
+<p><strong>1. <code>allowDiskUse: &lt;boolean&gt;</code></strong></p>
+<p>&#x7BA1;&#x9053;&#x9636;&#x6BB5;&#x5360;&#x7528;&#x5185;&#x5B58;&#x8D85;&#x8FC7;100M&#x65F6;&#x5141;&#x8BB8;&#x5199;&#x5165;&#x6570;&#x636E;&#x5230;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x4E2D;&#x3002;</p>
+<h3 id="&#x805A;&#x5408;&#x64CD;&#x4F5C;&#x8868;&#x8FBE;&#x5F0F;"><a name="&#x805A;&#x5408;&#x64CD;&#x4F5C;&#x8868;&#x8FBE;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x805A;&#x5408;&#x64CD;&#x4F5C;&#x8868;&#x8FBE;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>6.10. &#x805A;&#x5408;&#x64CD;&#x4F5C;&#x8868;&#x8FBE;&#x5F0F;</h3>
+<p><strong>1. &#x5B57;&#x6BB5;&#x8DEF;&#x5F84;&#x8868;&#x8FBE;&#x5F0F;</strong></p>
+<p><code>$&lt;field&gt;</code>&#xFF1A;&#x4F7F;&#x7528; <code>$</code> &#x8868;&#x793A;&#x5B57;&#x6BB5;&#x8DEF;&#x5F84;</p>
+<pre><code class="lang-js">{$project: {
+    _id: <span class="hljs-number">0</span>,
+    name: <span class="hljs-string">&apos;$name&apos;</span>
+  }
+}
+</code></pre>
+<p><strong>2. &#x7CFB;&#x7EDF;&#x53D8;&#x91CF;&#x8868;&#x8FBE;&#x5F0F;</strong></p>
+<p><code>$$CURRENT</code>&#xFF1A;&#x8868;&#x793A;&#x5F53;&#x524D;&#x64CD;&#x4F5C;&#x7684;&#x6587;&#x6863;</p>
+<pre><code class="lang-js">$$CURRENT.name === $name
+</code></pre>
+<p><strong>3. &#x5E38;&#x91CF;&#x8868;&#x8FBE;&#x5F0F;</strong>&#xFF08;&#x76F8;&#x5F53;&#x4E8E;&#x8F6C;&#x4E49;&#xFF09;</p>
+<p><code>$literal: &lt;value&gt;</code></p>
+<pre><code class="lang-js">{$project: {
+    _id: <span class="hljs-number">0</span>,
+    name: {$literal: <span class="hljs-string">&apos;$name&apos;</span>}
+  }
+}
+</code></pre>
+<h3 id="&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x64CD;&#x4F5C;&#x7B26;"><a name="&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x64CD;&#x4F5C;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x64CD;&#x4F5C;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>6.11. &#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x64CD;&#x4F5C;&#x7B26;</h3>
+<ul>
+<li>&#x4F5C;&#x7528;&#xFF1A;&#x5C06;&#x4E0D;&#x540C;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E3A;&#x76F8;&#x540C;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x4FBF;&#x4E8E;&#x540E;&#x7EED;&#x5904;&#x7406;&#xFF0C;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x7BA1;&#x9053;&#x9636;&#x6BB5;</li>
+<li>&#x683C;&#x5F0F;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-js">{$convert: {
+    input: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">&#x9700;&#x8981;&#x8F6C;&#x6362;&#x7684;&#x5B57;&#x6BB5;</span>&gt;</span>,
+    to: <span class="hljs-tag">&lt;<span class="hljs-name">&#x8F6C;&#x6362;&#x4E4B;&#x540E;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;</span>&gt;</span>,
+    onError: <span class="hljs-tag">&lt;<span class="hljs-name">&#x5982;&#x679C;&#x4E0D;&#x652F;&#x6301;&#xFF0C;&#x8F6C;&#x6362;&#x7684;&#x7C7B;&#x578B;</span>&gt;</span>,
+    onNull: <span class="hljs-tag">&lt;<span class="hljs-name">&#x5982;&#x679C;&#x6CA1;&#x6709;&#xFF0C;&#x8F6C;&#x6362;&#x7684;&#x7C7B;&#x578B;</span>&gt;</span>
+  }
+}
+</span></code></pre>
+<h2 id="&#x7D22;&#x5F15;"><a name="&#x7D22;&#x5F15;" class="anchor-navigation-ex-anchor" href="#&#x7D22;&#x5F15;"><i class="fa fa-link" aria-hidden="true"></i></a>7. &#x7D22;&#x5F15;</h2>
+<p>&#x7528;&#x4E8E;&#x63D0;&#x5347;&#x6570;&#x636E;&#x7684;&#x67E5;&#x8BE2;&#x901F;&#x5EA6;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x5B57;&#x6BB5;&#x7684;&#x76EE;&#x5F55;&#x3002;</p>
+<ul>
+<li><p>&#x4E3B;&#x952E;&#x4F1A;&#x9ED8;&#x8BA4;&#x521B;&#x5EFA;&#x7D22;&#x5F15;</p>
+</li>
+<li><p>&#x83B7;&#x53D6;&#x7D22;&#x5F15;&#xFF1A;<code>getIndexes()</code></p>
+</li>
+<li>&#x521B;&#x5EFA;&#x7D22;&#x5F15;&#xFF1A;<code>createIndex({ &lt;field&gt;: 1 | -1 })</code>&#xFF0C;1&#x8868;&#x793A;&#x6B63;&#x5E8F;&#xFF0C;-1&#x5012;&#x5E8F;</li>
+</ul>
+<h3 id="explain-&#x67E5;&#x8BE2;&#x5206;&#x6790;&#x5DE5;&#x5177;"><a name="explain-&#x67E5;&#x8BE2;&#x5206;&#x6790;&#x5DE5;&#x5177;" class="anchor-navigation-ex-anchor" href="#explain-&#x67E5;&#x8BE2;&#x5206;&#x6790;&#x5DE5;&#x5177;"><i class="fa fa-link" aria-hidden="true"></i></a>7.1. explain() &#x67E5;&#x8BE2;&#x5206;&#x6790;&#x5DE5;&#x5177;</h3>
+<pre><code>db.getCollection(&apos;person&apos;).find({name: &quot;Zander&quot;}).explain()
+</code></pre><ul>
+<li>&#x4F9D;&#x636E; <code>winningPlan</code> &#x4E2D;&#x7684; <code>stage</code> &#x7684;&#x53D6;&#x503C;&#x6765;&#x5224;&#x65AD;&#x67E5;&#x8BE2;&#x7684;&#x65B9;&#x5F0F;&#xFF1A;<ul>
+<li><code>IXSCAN</code>&#xFF1A;&#x6839;&#x636E;&#x7D22;&#x5F15;&#x67E5;&#x8BE2;</li>
+<li><code>COLLSCAN</code>&#xFF1A;&#x904D;&#x5386;&#x6574;&#x4E2A;&#x96C6;&#x5408;&#x67E5;&#x8BE2;</li>
+</ul>
+</li>
+</ul>
+<h3 id="&#x590D;&#x5408;&#x7D22;&#x5F15;"><a name="&#x590D;&#x5408;&#x7D22;&#x5F15;" class="anchor-navigation-ex-anchor" href="#&#x590D;&#x5408;&#x7D22;&#x5F15;"><i class="fa fa-link" aria-hidden="true"></i></a>7.2. &#x590D;&#x5408;&#x7D22;&#x5F15;</h3>
+<pre><code class="lang-js">db.getCollection(<span class="hljs-string">&apos;person&apos;</span>).createIndex({name: <span class="hljs-number">-1</span>, age: <span class="hljs-number">-1</span>})
+</code></pre>
+<ul>
+<li>&#x67E5;&#x8BE2;&#x7684;&#x65F6;&#x5019;&#x53EA;&#x652F;&#x6301;<strong>&#x524D;&#x7F00;&#x67E5;&#x8BE2;</strong>&#xFF08;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x5305;&#x542B;&#x524D;&#x7F00;&#xFF09;&#xFF0C;&#x5982;&#x4E0A;&#x9762;&#x7684;&#x67E5;&#x8BE2;&#x53EA;&#x652F;&#x6301;&#x4F7F;&#x7528; <code>name</code> &#x7684;&#x7D22;&#x5F15;&#x67E5;&#x8BE2;&#xFF0C;&#x4F7F;&#x7528; <code>age</code> &#x67E5;&#x8BE2;&#x65F6;&#x4E0D;&#x4F1A;&#x4F7F;&#x7528;&#x7D22;&#x5F15;&#x3002;</li>
+</ul>
+<h3 id="&#x591A;&#x952E;&#x7D22;&#x5F15;"><a name="&#x591A;&#x952E;&#x7D22;&#x5F15;" class="anchor-navigation-ex-anchor" href="#&#x591A;&#x952E;&#x7D22;&#x5F15;"><i class="fa fa-link" aria-hidden="true"></i></a>7.3. &#x591A;&#x952E;&#x7D22;&#x5F15;</h3>
+<p>&#x4E3A;&#x6570;&#x7EC4;&#x5B57;&#x6BB5;&#x521B;&#x5EFA;&#x7D22;&#x5F15;&#x65F6;&#x4F1A;&#x4E3A;&#x5176;&#x6BCF;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x90FD;&#x521B;&#x5EFA;&#x7D22;&#x5F15;&#x3002;</p>
+<h3 id="&#x7D22;&#x5F15;&#x5BF9;&#x6392;&#x5E8F;&#x7684;&#x5F71;&#x54CD;"><a name="&#x7D22;&#x5F15;&#x5BF9;&#x6392;&#x5E8F;&#x7684;&#x5F71;&#x54CD;" class="anchor-navigation-ex-anchor" href="#&#x7D22;&#x5F15;&#x5BF9;&#x6392;&#x5E8F;&#x7684;&#x5F71;&#x54CD;"><i class="fa fa-link" aria-hidden="true"></i></a>7.4. &#x7D22;&#x5F15;&#x5BF9;&#x6392;&#x5E8F;&#x7684;&#x5F71;&#x54CD;</h3>
+<ul>
+<li>&#x6392;&#x5E8F;&#x7684;&#x5B57;&#x6BB5;&#x82E5;&#x4E0D;&#x662F;&#x7D22;&#x5F15;&#x5B57;&#x6BB5;&#xFF0C;&#x4F1A;&#x5728;&#x6267;&#x884C;&#x67E5;&#x8BE2;&#x7684;&#x65F6;&#x5019;&#x6392;&#x5E8F;&#x518D;&#x8F93;&#x51FA;&#xFF1B;&#x53CD;&#x4E4B;&#xFF0C;&#x76F4;&#x63A5;&#x83B7;&#x53D6;&#x7D22;&#x5F15;&#x5BF9;&#x5E94;&#x7684;&#x6587;&#x6863;&#x6765;&#x8F93;&#x51FA;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x662F;&#x7B26;&#x5408;&#x7D22;&#x5F15;&#xFF0C;&#x5219;&#x6392;&#x5E8F;&#x6761;&#x4EF6;&#x5305;&#x542B;&#x7D22;&#x5F15;&#x5B57;&#x6BB5;&#x7684;<strong>&#x524D;&#x7F00;&#x5B57;&#x6BB5;</strong>&#x624D;&#x4F1A;&#x4F7F;&#x7528;&#x7D22;&#x5F15;&#x6765;&#x6392;&#x5E8F;</li>
+</ul>
+<h3 id="&#x552F;&#x4E00;&#x7D22;&#x5F15;"><a name="&#x552F;&#x4E00;&#x7D22;&#x5F15;" class="anchor-navigation-ex-anchor" href="#&#x552F;&#x4E00;&#x7D22;&#x5F15;"><i class="fa fa-link" aria-hidden="true"></i></a>7.5. &#x552F;&#x4E00;&#x7D22;&#x5F15;</h3>
+<ul>
+<li>&#x4E3B;&#x952E;&#x9ED8;&#x8BA4;&#x4E3A;&#x552F;&#x4E00;&#x7D22;&#x5F15;</li>
+<li>&#x521B;&#x5EFA;&#x552F;&#x4E00;&#x7D22;&#x5F15;&#xFF1A;&#x6307;&#x5B9A;&#x53C2;&#x6570; <code>{unique: true}</code></li>
+<li>&#x82E5;&#x6DFB;&#x52A0;&#x7684;&#x5B57;&#x6BB5;&#x6CA1;&#x6709;&#x552F;&#x4E00;&#x7D22;&#x5F15;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x8FD9;&#x6837;&#x7684;&#x6587;&#x6863;&#x4F1A;&#x81EA;&#x52A8;&#x586B;&#x5145;null&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x4F1A;&#x62A5;&#x9519;</li>
+</ul>
+<h3 id="&#x7A00;&#x758F;&#x7D22;&#x5F15;"><a name="&#x7A00;&#x758F;&#x7D22;&#x5F15;" class="anchor-navigation-ex-anchor" href="#&#x7A00;&#x758F;&#x7D22;&#x5F15;"><i class="fa fa-link" aria-hidden="true"></i></a>7.6. &#x7A00;&#x758F;&#x7D22;&#x5F15;</h3>
+<ul>
+<li>&#x7A00;&#x758F;&#x7D22;&#x5F15;&#x53EF;&#x4F18;&#x5316;&#x7D22;&#x5F15;&#x5360;&#x7528;&#x7684;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#xFF0C;&#x6DFB;&#x52A0;&#x53C2;&#x6570; <code>{sparse: true}</code>&#x3002;</li>
+<li>&#x7A00;&#x758F;&#x6027;&#x7D22;&#x5F15;&#x5FFD;&#x7565;&#x4E0D;&#x542B;&#x6709;&#x7D22;&#x5F15;&#x5B57;&#x6BB5;&#x7684;&#x6587;&#x6863;&#xFF0C;&#x5373;&#x5982;&#x679C;&#x7D22;&#x5F15;&#x5177;&#x5907;&#x552F;&#x4E00;&#x6027;&#x4E14;&#x5177;&#x5907;&#x7A00;&#x758F;&#x6027;&#xFF0C;&#x53EF;&#x6DFB;&#x52A0;&#x7F3A;&#x5931;&#x7D22;&#x5F15;&#x5B57;&#x6BB5;&#x7684;&#x6587;&#x6863;</li>
+</ul>
+<h3 id="&#x7D22;&#x5F15;&#x751F;&#x5B58;&#x65F6;&#x95F4;"><a name="&#x7D22;&#x5F15;&#x751F;&#x5B58;&#x65F6;&#x95F4;" class="anchor-navigation-ex-anchor" href="#&#x7D22;&#x5F15;&#x751F;&#x5B58;&#x65F6;&#x95F4;"><i class="fa fa-link" aria-hidden="true"></i></a>7.7. &#x7D22;&#x5F15;&#x751F;&#x5B58;&#x65F6;&#x95F4;</h3>
+<p>&#x82E5;&#x6587;&#x6863;&#x5305;&#x542B;&#x65E5;&#x671F;&#x5B57;&#x6BB5;&#x6216;&#x5305;&#x542B;&#x65E5;&#x671F;&#x7684;&#x6570;&#x7EC4;&#x5B57;&#x6BB5;&#xFF0C;&#x53EF;&#x5728;&#x521B;&#x5EFA;&#x7D22;&#x5F15;&#x7684;&#x65F6;&#x5019;&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x7684;&#x751F;&#x5B58;&#x65F6;&#x95F4;&#xFF0C;&#x8D85;&#x8FC7;&#x751F;&#x5B58;&#x65F6;&#x95F4;&#x4F1A;&#x81EA;&#x52A8;&#x5220;&#x9664;&#x5BF9;&#x5E94;&#x7684;&#x6587;&#x6863;&#x3002;</p>
+<blockquote>
+<p>&#x26A0;&#xFE0F;&#x4E0D;&#x80FD;&#x4FDD;&#x8BC1;&#x5373;&#x65F6;&#x6027;&#x3002;</p>
+</blockquote>
+<pre><code>db.getCollection(&apos;person&apos;).createIndex({addTime: 1}, {expireAfterSeconds: 5})
+</code></pre><ul>
+<li>&#x82E5;&#x7ED9;&#x6570;&#x7EC4;&#x5B57;&#x6BB5;&#x6307;&#x5B9A;&#x4E86;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x5219;&#x4EE5;&#x6570;&#x7EC4;&#x4E2D;&#x65F6;&#x95F4;&#x6700;&#x5C0F;&#x7684;&#x503C;&#x4E3A;&#x57FA;&#x51C6;&#x8BA1;&#x7B97;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x3002;</li>
+</ul>
+<h3 id="&#x5220;&#x9664;&#x7D22;&#x5F15;"><a name="&#x5220;&#x9664;&#x7D22;&#x5F15;" class="anchor-navigation-ex-anchor" href="#&#x5220;&#x9664;&#x7D22;&#x5F15;"><i class="fa fa-link" aria-hidden="true"></i></a>7.8. &#x5220;&#x9664;&#x7D22;&#x5F15;</h3>
+<pre><code class="lang-js">db.&lt;collection&gt;.dropIndex(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">&#x7D22;&#x5F15;&#x540D;&#x79F0;</span>&gt;</span>)
+</span></code></pre>
+<h2 id="&#x6570;&#x636E;&#x6A21;&#x578B;"><a name="&#x6570;&#x636E;&#x6A21;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x6A21;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>8. &#x6570;&#x636E;&#x6A21;&#x578B;</h2>
+<h3 id="&#x6587;&#x6863;&#x95F4;&#x5173;&#x7CFB;"><a name="&#x6587;&#x6863;&#x95F4;&#x5173;&#x7CFB;" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x6863;&#x95F4;&#x5173;&#x7CFB;"><i class="fa fa-link" aria-hidden="true"></i></a>8.1. &#x6587;&#x6863;&#x95F4;&#x5173;&#x7CFB;</h3>
+<ul>
+<li>&#x5185;&#x5D4C;&#x5F0F;&#x7ED3;&#x6784;<ul>
+<li>&#x4E00;&#x6B21;&#x67E5;&#x8BE2;&#x5C31;&#x80FD;&#x5F97;&#x5230;&#x6240;&#x6709;&#x6570;&#x636E;</li>
+<li>&#x82E5;&#x6570;&#x636E;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#xFF0C;&#x4E0D;&#x65B9;&#x4FBF;&#x7BA1;&#x7406;&#x548C;&#x66F4;&#x65B0;</li>
+<li>&#x9002;&#x7528;&#x4E8E;&#x6570;&#x636E;&#x4E0D;&#x590D;&#x6742;/&#x67E5;&#x8BE2;&#x9891;&#x7387;&#x8F83;&#x9AD8;&#x7684;&#x573A;&#x666F;</li>
+</ul>
+</li>
+<li>&#x89C4;&#x8303;&#x5F0F;&#x7ED3;&#x6784;&#xFF1A;&#x901A;&#x8FC7; id &#x5173;&#x8054;<ul>
+<li>&#x65B9;&#x4FBF;&#x7BA1;&#x7406;&#x590D;&#x6742;&#x7684;&#x6570;&#x636E;</li>
+<li>&#x67E5;&#x8BE2;&#x6570;&#x636E;&#x76F8;&#x5BF9;&#x9EBB;&#x70E6;</li>
+<li>&#x9002;&#x7528;&#x4E8E;&#x6570;&#x636E;&#x590D;&#x6742;/&#x66F4;&#x65B0;&#x9891;&#x7387;&#x8F83;&#x9AD8;&#x7684;&#x573A;&#x666F;</li>
+</ul>
+</li>
+</ul>
+<p>&#x5173;&#x7CFB;&#x7684;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<ul>
+<li>&#x4E00;&#x5BF9;&#x4E00;</li>
+<li>&#x4E00;&#x5BF9;&#x591A;</li>
+<li>&#x591A;&#x5BF9;&#x591A;</li>
+</ul>
+<h2 id="mongoose"><a name="mongoose" class="anchor-navigation-ex-anchor" href="#mongoose"><i class="fa fa-link" aria-hidden="true"></i></a>9. Mongoose</h2>
+<ol>
+<li>&#x5B89;&#x88C5;&#x5E76;&#x5BFC;&#x5165;</li>
+<li>&#x94FE;&#x63A5; MongoDB</li>
+<li>&#x76D1;&#x542C;&#x94FE;&#x63A5;&#x72B6;&#x6001;</li>
+</ol>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x81EA;&#x8C03;&#x7528;&#x51FD;&#x6570;&#x8FD4;&#x56DE; Promise</span>
+
+(<span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> User.find({});
+})();
+</code></pre>
+<h2 id="&#x590D;&#x5236;&#x96C6;"><a name="&#x590D;&#x5236;&#x96C6;" class="anchor-navigation-ex-anchor" href="#&#x590D;&#x5236;&#x96C6;"><i class="fa fa-link" aria-hidden="true"></i></a>10. &#x590D;&#x5236;&#x96C6;</h2>
+<p>&#x5982;&#x679C;&#x6240;&#x6709;&#x6570;&#x636E;&#x90FD;&#x5B58;&#x50A8;&#x5728;&#x4E00;&#x53F0; MongoDB &#x670D;&#x52A1;&#x5668;&#x4E0A;&#xFF1A;</p>
+<ol>
+<li>&#x4E0D;&#x5177;&#x5907;&#x9AD8;&#x53EF;&#x7528;&#x6027;&#xFF0C;&#x4E00;&#x65E6;&#x670D;&#x52A1;&#x5668;&#x5B95;&#x673A;&#xFF0C;&#x7528;&#x6237;&#x65E0;&#x6CD5;&#x7EE7;&#x7EED;&#x4F7F;&#x7528;</li>
+<li>&#x4E0D;&#x5177;&#x5907;&#x6570;&#x636E;&#x5B89;&#x5168;&#x6027;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x635F;&#x574F;&#x6570;&#x636E;&#x4E22;&#x5931;</li>
+<li>&#x4E0D;&#x80FD;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5206;&#x6D41;&#xFF08;&#x8BBF;&#x95EE;&#x6570;&#x636E;&#x65F6;&#x8FDC;&#x6162;&#x8FD1;&#x5FEB;&#xFF09;</li>
+</ol>
+<p>&#x5C06;<strong>&#x591A;&#x53F0;</strong>&#x4FDD;&#x5B58;&#x4E86;<strong>&#x76F8;&#x540C;&#x5185;&#x5BB9;</strong>&#x7684; MongoDB &#x670D;&#x52A1;&#x5668;&#x7EC4;&#x6210;&#x4E00;&#x4E2A;&#x96C6;&#x7FA4;&#xFF0C;&#x79F0;&#x4E3A;&#x590D;&#x5236;&#x96C6;&#x3002;</p>
+<ul>
+<li>&#x5728;&#x590D;&#x5236;&#x96C6;&#x4E2D;&#x6BCF;&#x4E00;&#x53F0; MongoDB &#x670D;&#x52A1;&#x5668;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x3002;</li>
+<li>&#x5728;&#x4E00;&#x4E2A;&#x590D;&#x5236;&#x96C6;&#x4E2D;&#x6700;&#x591A;&#x6709;50&#x4E2A;&#x8282;&#x70B9;&#x3002;</li>
+<li>&#x5728;&#x590D;&#x5236;&#x96C6;&#x4E2D;&#x5FC5;&#x987B;&#x6709;&#x4E00;&#x4E2A;&#x4E3B;&#x8282;&#x70B9;&#xFF0C;&#x53EA;&#x6709;&#x4E3B;&#x8282;&#x70B9;&#x53EF;&#x4EE5;&#x540C;&#x65F6;<strong>&#x8BFB;&#x5199;&#x6570;&#x636E;</strong>&#xFF0C;&#x5176;&#x5B83;&#x526F;&#x8282;&#x70B9;&#x53EA;&#x80FD;&#x8BFB;&#x6570;&#x636E;&#x3002;</li>
+<li>&#x590D;&#x5236;&#x96C6;&#x4E2D;&#x8282;&#x70B9;&#x4E4B;&#x95F4;&#x6BCF;&#x9694;2&#x79D2;&#x76F8;&#x4E92;&#x53D1;&#x9001;&#x5FC3;&#x8DF3;&#x8BF7;&#x6C42;&#xFF0C;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x6709;&#x8282;&#x70B9;&#x51FA;&#x73B0;&#x95EE;&#x9898;&#xFF0C;&#x82E5;&#x67D0;&#x4E2A;&#x8282;&#x70B9;10s&#x6CA1;&#x6709;&#x76F8;&#x5E94;&#x8BF7;&#x6C42;&#xFF0C;&#x89C6;&#x4E3A;&#x51FA;&#x73B0;&#x95EE;&#x9898;&#x3002;</li>
+<li>&#x4E3B;&#x8282;&#x70B9;&#x82E5;&#x51FA;&#x73B0;&#x95EE;&#x9898;&#xFF0C;&#x526F;&#x8282;&#x70B9;&#x81EA;&#x52A8;&#x53D1;&#x8D77;&#x6295;&#x7968;&#xFF0C;&#x91CD;&#x65B0;&#x9009;&#x4E3E;&#x4E3B;&#x8282;&#x70B9;&#x3002;</li>
+</ul>
+<p>&#x89E6;&#x53D1;&#x9009;&#x4E3E;&#x7684;&#x6761;&#x4EF6;&#xFF1A;</p>
+<ul>
+<li>&#x521D;&#x59CB;&#x5316;&#x590D;&#x5236;&#x96C6;&#x65F6;</li>
+<li>&#x6709;&#x65B0;&#x8282;&#x70B9;&#x52A0;&#x5165;&#x65F6;</li>
+<li>&#x5DF2;&#x6709;&#x4E3B;&#x8282;&#x70B9;&#x6302;&#x4E86;&#x65F6;</li>
+</ul>
+<h3 id="&#x590D;&#x5236;&#x96C6;&#x540C;&#x6B65;&#x89C4;&#x5219;"><a name="&#x590D;&#x5236;&#x96C6;&#x540C;&#x6B65;&#x89C4;&#x5219;" class="anchor-navigation-ex-anchor" href="#&#x590D;&#x5236;&#x96C6;&#x540C;&#x6B65;&#x89C4;&#x5219;"><i class="fa fa-link" aria-hidden="true"></i></a>10.1. &#x590D;&#x5236;&#x96C6;&#x540C;&#x6B65;&#x89C4;&#x5219;</h3>
+<ol>
+<li>&#x521D;&#x59CB;&#x5316;&#x540C;&#x6B65;</li>
+</ol>
+<p>&#x5F53;&#x6709;&#x4E00;&#x4E2A;&#x65B0;&#x8282;&#x70B9;&#x52A0;&#x5165;&#x5230;&#x590D;&#x5236;&#x96C6;&#x4E4B;&#x540E;&#xFF0C;&#x4F1A;&#x5C06;&#x6240;&#x6709;&#x4E3B;&#x8282;&#x70B9;&#x7684;&#x6570;&#x636E;&#x62F7;&#x8D1D;&#x5230;&#x65B0;&#x8282;&#x70B9;&#x4E2D;</p>
+<ol>
+<li>&#x540C;&#x6B65;&#x5199;&#x5E93;&#x8BB0;&#x5F55;</li>
+</ol>
+<p>&#x5728;&#x6BCF;&#x4E00;&#x4E2A; MongoDB &#x670D;&#x52A1;&#x5668;&#x4E0A;&#x90FD;&#x6709;&#x4E00;&#x4E2A; local &#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5176;&#x4E2D; oplog &#x96C6;&#x5408;&#x4FDD;&#x5B58;&#x5F53;&#x524D;&#x670D;&#x52A1;&#x5668;&#x7684;&#x6240;&#x6709;&#x64CD;&#x4F5C;&#x8BB0;&#x5F55;&#x3002;&#x6267;&#x884C;&#x5B8C;&#x521D;&#x59CB;&#x5316;&#x540C;&#x6B65;&#x540E;&#xFF0C;&#x526F;&#x8282;&#x70B9;&#x4F1A;&#x5B9A;&#x671F;&#x540C;&#x6B65;&#x548C;&#x6267;&#x884C;&#x5199;&#x5E93;&#x8BB0;&#x5F55;</p>
+<h2 id="&#x5206;&#x7247;"><a name="&#x5206;&#x7247;" class="anchor-navigation-ex-anchor" href="#&#x5206;&#x7247;"><i class="fa fa-link" aria-hidden="true"></i></a>11. &#x5206;&#x7247;</h2>
+<p>&#x5206;&#x7247;&#x5C31;&#x662F;&#x5C06;&#x6570;&#x636E;&#x5E93;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x62C6;&#x5206;&#x6210;&#x591A;&#x4EFD;&#xFF0C;&#x5206;&#x5E03;&#x5F0F;&#x5730;&#x4FDD;&#x5B58;&#x5230;&#x591A;&#x53F0;&#x4E3B;&#x673A;&#x4E0A;&#xFF0C;&#x53EF;&#x89E3;&#x51B3;&#x670D;&#x52A1;&#x5668;&#x7684;&#x5BB9;&#x91CF;&#x95EE;&#x9898;&#x3002;</p>
+<ul>
+<li>&#x5E76;&#x4E0D;&#x662F;&#x6240;&#x6709;&#x96C6;&#x5408;&#x90FD;&#x9700;&#x8981;&#x505A;&#x5206;&#x7247;&#xFF0C;&#x4E0D;&#x4F7F;&#x7528;&#x5206;&#x7247;&#x7684;&#x96C6;&#x5408;&#x7EDF;&#x4E00;&#x4FDD;&#x5B58;&#x5728;<strong>&#x4E3B;&#x5206;&#x7247;</strong>&#x4E2D;&#x3002;</li>
+</ul>
+<h3 id="&#x5206;&#x7247;&#x7ED3;&#x6784;"><a name="&#x5206;&#x7247;&#x7ED3;&#x6784;" class="anchor-navigation-ex-anchor" href="#&#x5206;&#x7247;&#x7ED3;&#x6784;"><i class="fa fa-link" aria-hidden="true"></i></a>11.1. &#x5206;&#x7247;&#x7ED3;&#x6784;</h3>
+<ul>
+<li>&#x5206;&#x7247;&#x670D;&#x52A1;&#x5668;&#xFF1A;&#x540C;&#x4E8E;&#x5B58;&#x50A8;&#x4E0D;&#x540C;&#x6570;&#x636E;&#x7684;&#x591A;&#x4E2A;&#x670D;&#x52A1;&#x5668;</li>
+<li>&#x914D;&#x7F6E;&#x670D;&#x52A1;&#x5668;&#xFF1A;&#x7528;&#x4E8E;&#x914D;&#x7F6E;&#x5206;&#x7247;&#x670D;&#x52A1;&#x5668;&#x5B58;&#x50A8;&#x8303;&#x56F4;</li>
+<li><strong>&#x8DEF;&#x7531;&#x670D;&#x52A1;&#x5668;</strong>&#xFF1A;&#x8D1F;&#x8D23;&#x5206;&#x53D1;&#x5BA2;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;</li>
+</ul>
+<p>&#x8DEF;&#x7531;&#x670D;&#x52A1;&#x5668;&#x5206;&#x53D1;&#x8BF7;&#x6C42;&#x7684;&#x6D41;&#x7A0B;&#xFF1A;</p>
+<ol>
+<li>&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x5230;&#x8DEF;&#x7531;&#x670D;&#x52A1;&#x5668;</li>
+<li>&#x8DEF;&#x7531;&#x670D;&#x52A1;&#x5668;&#x914D;&#x7F6E;&#x670D;&#x52A1;&#x5668;&#x67E5;&#x8BE2;&#x6570;&#x636E;&#x6BB5;&#xFF08;&#x6570;&#x636E;&#x8303;&#x56F4;&#xFF09;</li>
+<li>&#x6839;&#x636E;&#x67E5;&#x8BE2;&#x7684;&#x7ED3;&#x679C;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x5206;&#x7247;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x505A;&#x5904;&#x7406;</li>
+<li>&#x62FF;&#x5230;&#x5904;&#x7406;&#x7ED3;&#x679C;&#xFF0C;&#x5C06;&#x5904;&#x7406;&#x7684;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#x7ED9;&#x7528;&#x6237;</li>
+</ol>
+<h3 id="&#x5206;&#x7247;&#x7247;&#x952E;"><a name="&#x5206;&#x7247;&#x7247;&#x952E;" class="anchor-navigation-ex-anchor" href="#&#x5206;&#x7247;&#x7247;&#x952E;"><i class="fa fa-link" aria-hidden="true"></i></a>11.2. &#x5206;&#x7247;&#x7247;&#x952E;</h3>
+<p>&#x5206;&#x7247;&#x7247;&#x952E;&#x7528;&#x4E8E;&#x5C06;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5230;&#x4E0D;&#x7528;&#x7684;&#x5206;&#x7247;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x3002;</p>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x5C06;&#x6587;&#x6863;&#x91CC;&#x7684;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5B57;&#x6BB5;&#x8BBE;&#x7F6E;&#x4E3A;&#x5206;&#x7247;&#x7247;&#x952E;</li>
+<li>&#x8BBE;&#x7F6E;&#x5B8C;&#x540E;&#xFF0C;mongodb &#x4F1A;&#x81EA;&#x52A8;&#x6309;&#x7167;&#x5B57;&#x6BB5;&#x7684;&#x53D6;&#x503C;&#x8FDB;&#x884C;&#x5212;&#x5206;&#xFF0C;&#x5212;&#x5206;&#x4E3A;&#x4E00;&#x4E2A;&#x4E2A;&#x6570;&#x636E;&#x6BB5;</li>
+<li>&#x7136;&#x540E; mongodb &#x4F1A;&#x81EA;&#x52A8;&#x51B3;&#x5B9A;&#x54EA;&#x4E2A;&#x5206;&#x7247;&#x670D;&#x52A1;&#x5668;&#x4FDD;&#x5B58;&#x54EA;&#x4E9B;&#x6570;&#x636E;&#x6BB5;</li>
+</ul>
+<p>&#x6CE8;&#x610F;&#x70B9;&#xFF1A;</p>
+<ol>
+<li>&#x7247;&#x952E;&#x53EF;&#x4EE5;&#x4E00;&#x4E2A;&#x6216;&#x8005;&#x591A;&#x4E2A;&#x5B57;&#x6BB5;</li>
+<li>&#x53EA;&#x6709;&#x7D22;&#x5F15;&#x5B57;&#x6BB5;&#x624D;&#x80FD;&#x88AB;&#x8BBE;&#x7F6E;&#x4E3A;&#x7247;&#x952E;</li>
+<li>&#x5206;&#x7247;&#x670D;&#x52A1;&#x5668;&#x4FDD;&#x5B58;&#x54EA;&#x4E9B;&#x6570;&#x636E;&#x6BB5;&#x7684;&#x503C;&#x662F;&#x968F;&#x673A;&#x7684;&#xFF0C;&#x5E76;&#x4E0D;&#x662F;&#x8FDE;&#x7EED;&#x7684;</li>
+<li>&#x6570;&#x636E;&#x6BB5;&#x7684;&#x5212;&#x5206;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7247;&#x952E;&#x7684;&#x53D6;&#x503C;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7247;&#x952E;&#x53D6;&#x503C;&#x7684;&#x54C8;&#x5E0C;&#x503C;</li>
+</ol>
+<h3 id="&#x5982;&#x4F55;&#x9009;&#x62E9;&#x7247;&#x952E;"><a name="&#x5982;&#x4F55;&#x9009;&#x62E9;&#x7247;&#x952E;" class="anchor-navigation-ex-anchor" href="#&#x5982;&#x4F55;&#x9009;&#x62E9;&#x7247;&#x952E;"><i class="fa fa-link" aria-hidden="true"></i></a>11.3. &#x5982;&#x4F55;&#x9009;&#x62E9;&#x7247;&#x952E;</h3>
+<ol>
+<li>&#x7247;&#x952E;&#x5B57;&#x6BB5;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x5E94;&#x66F4;&#x5E7F;&#xFF0C;&#x4EE5;&#x5212;&#x5206;&#x66F4;&#x591A;&#x7684;&#x6570;&#x636E;&#x6BB5;</li>
+<li>&#x5B57;&#x6BB5;&#x53D6;&#x503C;&#x7684;&#x5206;&#x914D;&#x5E94;&#x66F4;&#x5E73;&#x8861;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x90FD;&#x96C6;&#x4E2D;&#x5728;&#x67D0;&#x4E2A;&#x6570;&#x636E;&#x6BB5;&#x5185;</li>
+<li>&#x4E0D;&#x5E94;&#x8BE5;&#x9009;&#x62E9;&#x5355;&#x5411;&#x589E;&#x52A0;&#x6216;&#x8005;&#x51CF;&#x5C11;&#x7684;&#x5B57;&#x6BB5;&#x4F5C;&#x4E3A;&#x7247;&#x952E;</li>
+</ol>
+<p>&#x6280;&#x5DE7;&#xFF1A;</p>
+<ul>
+<li>&#x53D6;&#x503C;&#x4E0D;&#x591F;&#x5E7F;&#x6216;&#x4E0D;&#x591F;&#x5E73;&#x8861;&#xFF0C;&#x53EF;&#x4F7F;&#x7528;&#x590D;&#x5408;&#x7247;&#x952E;</li>
+<li>&#x5982;&#x679C;&#x53D6;&#x503C;&#x662F;&#x5355;&#x5411;&#x589E;&#x52A0;/&#x51CF;&#x5C11;&#xFF0C;&#x53EF;&#x4F7F;&#x7528;&#x5176;&#x54C8;&#x5E0C;&#x503C;&#x5212;&#x5206;</li>
+</ul>
+<p><strong>&#x7247;&#x952E;&#x4E00;&#x65E6;&#x9009;&#x62E9;&#x5C31;&#x4E0D;&#x80FD;&#x66F4;&#x6539;&#xFF0C;&#x524D;&#x671F;&#x9009;&#x62E9;&#x7247;&#x952E;&#x8981;&#x8C28;&#x614E;&#x3002;</strong></p>
+<h3 id="&#x5206;&#x7247;&#x67E5;&#x8BE2;"><a name="&#x5206;&#x7247;&#x67E5;&#x8BE2;" class="anchor-navigation-ex-anchor" href="#&#x5206;&#x7247;&#x67E5;&#x8BE2;"><i class="fa fa-link" aria-hidden="true"></i></a>11.4. &#x5206;&#x7247;&#x67E5;&#x8BE2;</h3>
+<ol>
+<li>&#x67E5;&#x8BE2;&#x7684;&#x6761;&#x4EF6;&#x662F;&#x5206;&#x7247;&#x7247;&#x952E;</li>
+</ol>
+<p>&#x8DEF;&#x7531;&#x670D;&#x52A1;&#x5668;&#x53EF;&#x4EE5;&#x51C6;&#x786E;&#x627E;&#x5230;&#x4FDD;&#x5B58;&#x5BF9;&#x5E94;&#x6570;&#x636E;&#x7684;&#x5206;&#x7247;&#x670D;&#x52A1;&#x5668;&#x3002;</p>
+<ol>
+<li>&#x67E5;&#x8BE2;&#x7684;&#x7684;&#x6761;&#x4EF6;&#x4E0D;&#x662F;&#x5206;&#x7247;&#x7247;&#x952E;</li>
+</ol>
+<p>&#x5C06;&#x8BF7;&#x6C42;&#x53D1;&#x9001;&#x5230;&#x6240;&#x6709;&#x5206;&#x7247;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#xFF0C;&#x518D;&#x5C06;&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#x6574;&#x5408;&#xFF0C;&#x6574;&#x5408;&#x540E;&#x8FD4;&#x56DE;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#x3002;</p>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> <a href="https://xuezenghui.com" target="_blank">Zander Hsueh</a> </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <i>updated</i> 2022-06-12 18:31:14 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Dev">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="rem布局.html" class="navigation navigation-next " aria-label="Next page: rem布局">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Mongo DB","level":"1.2.1","depth":2,"next":{"title":"rem布局","level":"1.2.2","depth":2,"path":"Dev/rem布局.md","ref":"Dev/rem布局.md","articles":[]},"previous":{"title":"Dev","level":"1.2","depth":1,"path":"Dev/README.md","ref":"Dev/README.md","articles":[{"title":"Mongo DB","level":"1.2.1","depth":2,"path":"Dev/MongoDB.md","ref":"Dev/MongoDB.md","articles":[]},{"title":"rem布局","level":"1.2.2","depth":2,"path":"Dev/rem布局.md","ref":"Dev/rem布局.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["code","anchor-navigation-ex","page-footer-ex","-lunr","-search","search-pro","-sharing","splitter","hide-element","insert-logo","expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"page-footer-ex":{"copyright":"[Zander Hsueh](https://xuezenghui.com)","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<i>updated</i>"},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 60px; min-height: 60px","url":"/images/logo.png"}},"theme":"default","author":"Zander Hsueh","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*","sharing":false},"file":{"path":"Dev/MongoDB.md","mtime":"2022-06-12T10:31:14.549Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-12T10:35:46.304Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
