@@ -2,6 +2,7 @@ echo "Start Publish🏃"
 book sm
 git co master
 gitbook build . docs
+echo "Build Success!🎉"
 git add .
 git commit -m "feat: update note"
 git push
