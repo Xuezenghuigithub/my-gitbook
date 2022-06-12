@@ -1,0 +1,42 @@
+{
+  "name": "my-gitbook",
+  "version": "1.0.0",
+  "description": "欢迎来到我的学习笔记站点。",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "gitbook-plugin-anchor-navigation-ex": "^1.0.14",
+    "gitbook-plugin-code": "^0.1.0",
+    "gitbook-plugin-copy-code-button": "^0.0.2",
+    "gitbook-plugin-search-pro": "^2.0.2",
+    "gitbook-plugin-insert-logo": "^0.1.5",
+    "gitbook-plugin-expandable-chapters-small": "^0.1.7",
+    "gitbook-plugin-hide-element": "^0.0.4",
+    "gitbook-plugin-page-footer-ex": "^0.1.2",
+    "gitbook-plugin-splitter": "^0.0.8"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-gitbook": "~1.5.0",
+    "grunt-gh-pages": "~1.0.0",
+    "grunt-contrib-clean": "~1.0.0",
+    "grunt-contrib-watch": "~1.0.0",
+    "grunt-http-server": "~1.14.0",
+    "grunt-open": "~0.2.3"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xuezenghuigithub/my-gitbook.git"
+  },
+  "author": "Zander Hsueh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xuezenghuigithub/my-note/issues"
+  },
+  "homepage": "https://github.com/Xuezenghuigithub/my-note#readme"
+}
