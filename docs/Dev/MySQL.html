@@ -1,0 +1,929 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>My SQL · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Zander Hsueh">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Promise.html" />
+    
+    
+    <link rel="prev" href="MongoDB.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Dev
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="MongoDB.html">
+            
+                <a href="MongoDB.html">
+            
+                    
+                    Mongo DB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2" data-path="MySQL.html">
+            
+                <a href="MySQL.html">
+            
+                    
+                    My SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="Promise.html">
+            
+                <a href="Promise.html">
+            
+                    
+                    Promise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="rem布局.html">
+            
+                <a href="rem布局.html">
+            
+                    
+                    rem布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="Sass.html">
+            
+                <a href="Sass.html">
+            
+                    
+                    Sass
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="Typescript.html">
+            
+                <a href="Typescript.html">
+            
+                    
+                    Typescript
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Economics
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Economics/经济学原理——微观经济学.html">
+            
+                <a href="../Economics/经济学原理——微观经济学.html">
+            
+                    
+                    经济学原理——微观经济学
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Ops
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Ops/Docker.html">
+            
+                <a href="../Ops/Docker.html">
+            
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >My SQL</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#mysql"><b> </b>MySQL</a></li><ul><li><span class="title-icon "></span><a href="#sql&#x8BED;&#x53E5;"><b>1. </b>SQL&#x8BED;&#x53E5;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;"><b>1.1. </b>&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;</a></li><li><span class="title-icon "></span><a href="#&#x8868;&#x64CD;&#x4F5C;"><b>1.2. </b>&#x8868;&#x64CD;&#x4F5C;</a></li><li><span class="title-icon "></span><a href="#&#x5B58;&#x50A8;&#x5F15;&#x64CE;"><b>1.3. </b>&#x5B58;&#x50A8;&#x5F15;&#x64CE;</a></li><li><span class="title-icon "></span><a href="#&#x6570;&#x636E;&#x64CD;&#x4F5C;"><b>1.4. </b>&#x6570;&#x636E;&#x64CD;&#x4F5C;</a></li></ul><li><span class="title-icon "></span><a href="#&#x6570;&#x636E;&#x7C7B;&#x578B;"><b>2. </b>&#x6570;&#x636E;&#x7C7B;&#x578B;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6574;&#x6570;&#x7C7B;&#x578B;"><b>2.1. </b>&#x6574;&#x6570;&#x7C7B;&#x578B;</a></li><li><span class="title-icon "></span><a href="#&#x6D6E;&#x70B9;&#x7C7B;&#x578B;"><b>2.2. </b>&#x6D6E;&#x70B9;&#x7C7B;&#x578B;</a></li><li><span class="title-icon "></span><a href="#&#x5B9A;&#x70B9;&#x7C7B;&#x578B;"><b>2.3. </b>&#x5B9A;&#x70B9;&#x7C7B;&#x578B;</a></li><li><span class="title-icon "></span><a href="#&#x5B57;&#x7B26;&#x7C7B;&#x578B;"><b>2.4. </b>&#x5B57;&#x7B26;&#x7C7B;&#x578B;</a></li><li><span class="title-icon "></span><a href="#&#x5927;&#x6587;&#x672C;&#x7C7B;&#x578B;"><b>2.5. </b>&#x5927;&#x6587;&#x672C;&#x7C7B;&#x578B;</a></li><li><span class="title-icon "></span><a href="#&#x679A;&#x4E3E;&#x7C7B;&#x578B;"><b>2.6. </b>&#x679A;&#x4E3E;&#x7C7B;&#x578B;</a></li><li><span class="title-icon "></span><a href="#&#x96C6;&#x5408;&#x7C7B;&#x578B;"><b>2.7. </b>&#x96C6;&#x5408;&#x7C7B;&#x578B;</a></li><li><span class="title-icon "></span><a href="#&#x5E03;&#x5C14;&#x7C7B;&#x578B;"><b>2.8. </b>&#x5E03;&#x5C14;&#x7C7B;&#x578B;</a></li><li><span class="title-icon "></span><a href="#&#x65E5;&#x671F;&#x7C7B;&#x578B;"><b>2.9. </b>&#x65E5;&#x671F;&#x7C7B;&#x578B;</a></li></ul><li><span class="title-icon "></span><a href="#&#x6570;&#x636E;&#x5B8C;&#x6574;&#x6027;"><b>3. </b>&#x6570;&#x636E;&#x5B8C;&#x6574;&#x6027;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5B9E;&#x4F53;&#x5B8C;&#x6574;&#x6027;"><b>3.1. </b>&#x5B9E;&#x4F53;&#x5B8C;&#x6574;&#x6027;</a></li><li><span class="title-icon "></span><a href="#&#x57DF;&#x5B8C;&#x6574;&#x6027;"><b>3.2. </b>&#x57DF;&#x5B8C;&#x6574;&#x6027;</a></li><li><span class="title-icon "></span><a href="#&#x53C2;&#x7167;&#x5B8C;&#x6574;&#x6027;"><b>3.3. </b>&#x53C2;&#x7167;&#x5B8C;&#x6574;&#x6027;</a></li></ul><li><span class="title-icon "></span><a href="#&#x67E5;&#x8BE2;&#x6DF1;&#x5165;"><b>4. </b>&#x67E5;&#x8BE2;&#x6DF1;&#x5165;</a></li><li><span class="title-icon "></span><a href="#&#x4E8B;&#x52A1;"><b>5. </b>&#x4E8B;&#x52A1;</a></li></ul></ul></div><a href="#mysql" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="mysql"><a name="mysql" class="anchor-navigation-ex-anchor" href="#mysql"><i class="fa fa-link" aria-hidden="true"></i></a> MySQL</h1>
+<h2 id="sql&#x8BED;&#x53E5;"><a name="sql&#x8BED;&#x53E5;" class="anchor-navigation-ex-anchor" href="#sql&#x8BED;&#x53E5;"><i class="fa fa-link" aria-hidden="true"></i></a>1. SQL&#x8BED;&#x53E5;</h2>
+<p>&#x529F;&#x80FD;&#x5212;&#x5206;&#xFF1A;</p>
+<ul>
+<li>DDL&#xFF1A;&#x6570;&#x636E;&#x5B9A;&#x4E49;&#x8BED;&#x53E5;&#xFF0C;&#x7528;&#x6765;&#x5B9A;&#x4E49;&#x6570;&#x636E;&#x5E93;&#x5BF9;&#x8C61;&#xFF0C;&#x521B;&#x5EFA;&#x5E93;&#x3001;&#x8868;&#x3001;&#x5217;&#x7B49;</li>
+<li>DML&#xFF1A;&#x6570;&#x636E;&#x64CD;&#x4F5C;&#x8BED;&#x53E5;&#xFF0C;&#x64CD;&#x4F5C;&#x6570;&#x636E;&#x5E93;&#x8868;&#x4E2D;&#x7684;&#x8BB0;&#x5F55;</li>
+<li>DQL&#xFF1A;&#x6570;&#x636E;&#x5E93;&#x67E5;&#x8BE2;&#x8BED;&#x53E5;</li>
+<li>DCL&#xFF1A;&#x6570;&#x636E;&#x63A7;&#x5236;&#x8BED;&#x53E5;&#xFF0C;&#x7528;&#x6765;&#x5B9A;&#x4E49;&#x8BBF;&#x95EE;&#x6743;&#x9650;&#x548C;&#x5B89;&#x5168;&#x7EA7;&#x522B;</li>
+</ul>
+<h3 id="&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;"><a name="&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;</h3>
+<h4 id="&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;"><a name="&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;</h4>
+<pre><code class="lang-sql"><span class="hljs-keyword">create</span> <span class="hljs-keyword">database</span> &#x540D;&#x79F0;;
+</code></pre>
+<blockquote>
+<p>&#x540D;&#x79F0;&#x82E5;&#x662F;&#x5173;&#x952E;&#x5B57;&#x6216;&#x7279;&#x6B8A;&#x7B26;&#x53F7;&#xFF0C;&#x9700;&#x8981;&#x6DFB;&#x52A0;``&#x7B26;&#x53F7;&#x3002;</p>
+</blockquote>
+<ul>
+<li>&#x65E0;&#x5219;&#x521B;&#x5EFA;&#xFF0C;&#x6709;&#x5219;&#x8DF3;&#x8FC7;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql"><span class="hljs-keyword">create</span> <span class="hljs-keyword">database</span> <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">exists</span> &#x540D;&#x79F0;;
+</code></pre>
+<ul>
+<li>&#x6307;&#x5B9A;&#x7F16;&#x7801;&#x683C;&#x5F0F;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql"><span class="hljs-keyword">create</span> <span class="hljs-keyword">database</span> <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">exists</span> &#x540D;&#x79F0; <span class="hljs-keyword">charset</span>=utf8;
+</code></pre>
+<ul>
+<li>&#x67E5;&#x770B;&#x6570;&#x636E;&#x5E93;&#x5168;&#x5C40;&#x9ED8;&#x8BA4;&#x7F16;&#x7801;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql"><span class="hljs-keyword">show</span> <span class="hljs-keyword">variables</span> <span class="hljs-keyword">like</span> <span class="hljs-string">&apos;character_set_%&apos;</span>;
+</code></pre>
+<ul>
+<li>&#x67E5;&#x770B;&#x6307;&#x5B9A;&#x6570;&#x636E;&#x5E93;&#x7F16;&#x7801;&#x683C;&#x5F0F;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql"><span class="hljs-keyword">show</span> <span class="hljs-keyword">create</span> <span class="hljs-keyword">database</span> &#x5E93;&#x540D;;
+</code></pre>
+<h4 id="&#x5220;&#x9664;&#x6570;&#x636E;&#x5E93;"><a name="&#x5220;&#x9664;&#x6570;&#x636E;&#x5E93;" class="anchor-navigation-ex-anchor" href="#&#x5220;&#x9664;&#x6570;&#x636E;&#x5E93;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;&#x6570;&#x636E;&#x5E93;</h4>
+<pre><code class="lang-sql"><span class="hljs-keyword">drop</span> <span class="hljs-keyword">database</span> &#x540D;&#x79F0;;
+</code></pre>
+<ul>
+<li>&#x6709;&#x5219;&#x5220;&#x9664;&#xFF0C;&#x65E0;&#x5219;&#x8DF3;&#x8FC7;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql"><span class="hljs-keyword">drop</span> <span class="hljs-keyword">database</span> <span class="hljs-keyword">if</span> <span class="hljs-keyword">exists</span> &#x540D;&#x79F0;;
+</code></pre>
+<h4 id="&#x4FEE;&#x6539;&#x6570;&#x636E;&#x5E93;"><a name="&#x4FEE;&#x6539;&#x6570;&#x636E;&#x5E93;" class="anchor-navigation-ex-anchor" href="#&#x4FEE;&#x6539;&#x6570;&#x636E;&#x5E93;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FEE;&#x6539;&#x6570;&#x636E;&#x5E93;</h4>
+<ul>
+<li>&#x4FEE;&#x6539;&#x5B57;&#x7B26;&#x96C6;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql"><span class="hljs-keyword">alter</span> <span class="hljs-keyword">database</span> &#x540D;&#x79F0; <span class="hljs-keyword">charset</span>=utf8;
+</code></pre>
+<h3 id="&#x8868;&#x64CD;&#x4F5C;"><a name="&#x8868;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x8868;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x8868;&#x64CD;&#x4F5C;</h3>
+<p>&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x7684;&#x8868;&#x64CD;&#x4F5C;&#x524D;&#x9700;&#x6307;&#x5B9A;&#x8981;&#x64CD;&#x4F5C;&#x7684;&#x6570;&#x636E;&#x5E93;&#xFF1A;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">use</span> &#x5E93;&#x540D;;
+</code></pre>
+<h4 id="&#x521B;&#x5EFA;&#x8868;"><a name="&#x521B;&#x5EFA;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x8868;</h4>
+<pre><code class="lang-sql"><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span>  <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">exists</span> &#x8868;&#x540D;(
+    <span class="hljs-keyword">field</span>&#x540D;&#x79F0; &#x6570;&#x636E;&#x7C7B;&#x578B;,
+    <span class="hljs-keyword">field</span>&#x540D;&#x79F0; &#x6570;&#x636E;&#x7C7B;&#x578B;
+);
+</code></pre>
+<ul>
+<li>&#x67E5;&#x770B;&#x6240;&#x6709;&#x8868;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql"><span class="hljs-keyword">show</span> <span class="hljs-keyword">tables</span>;
+</code></pre>
+<ul>
+<li>&#x67E5;&#x770B;&#x8868;&#x7ED3;&#x6784;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">desc &#x8868;&#x540D;;
+</code></pre>
+<h4 id="&#x5220;&#x9664;&#x8868;"><a name="&#x5220;&#x9664;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x5220;&#x9664;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;&#x8868;</h4>
+<pre><code class="lang-sql"><span class="hljs-keyword">drop</span> <span class="hljs-keyword">if</span> <span class="hljs-keyword">exists</span> &#x8868;&#x540D;;
+</code></pre>
+<h4 id="&#x4FEE;&#x6539;&#x8868;"><a name="&#x4FEE;&#x6539;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x4FEE;&#x6539;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FEE;&#x6539;&#x8868;</h4>
+<ul>
+<li>&#x4FEE;&#x6539;&#x8868;&#x540D;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql"><span class="hljs-keyword">rename</span> <span class="hljs-keyword">table</span> &#x539F;&#x8868;&#x540D; <span class="hljs-keyword">to</span> &#x65B0;&#x8868;&#x540D;;
+</code></pre>
+<ul>
+<li>&#x6DFB;&#x52A0;&#x5B57;&#x6BB5;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql"><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> &#x8868;&#x540D; <span class="hljs-keyword">add</span> &#x5B57;&#x6BB5;&#x540D;&#x79F0; &#x6570;&#x636E;&#x7C7B;&#x578B; [&#x4F4D;&#x7F6E;];
+</code></pre>
+<blockquote>
+<p>&#x4F4D;&#x7F6E;&#x53C2;&#x6570;&#xFF1A;&#x53EF;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x4F1A;&#x65B0;&#x589E;&#x5230;&#x6700;&#x540E;&#xFF0C;&#x53EF;&#x6307;&#x5B9A;&#x4E3A; <code>first</code>&#x3001;<code>after &#x5DF2;&#x6709;&#x5B57;&#x6BB5;&#x540D;</code>&#x3002;</p>
+</blockquote>
+<ul>
+<li>&#x5220;&#x9664;&#x5B57;&#x6BB5;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql"><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> &#x8868;&#x540D; <span class="hljs-keyword">drop</span> &#x5B57;&#x6BB5;&#x540D;;
+</code></pre>
+<ul>
+<li>&#x4FEE;&#x6539;&#x5B57;&#x6BB5;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">// &#x53EA;&#x4FEE;&#x6539;&#x5B57;&#x6BB5;&#x7C7B;&#x578B;
+<span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> &#x8868;&#x540D; <span class="hljs-keyword">modify</span> &#x5B57;&#x6BB5;&#x540D; &#x6570;&#x636E;&#x7C7B;&#x578B;;
+// &#x4FEE;&#x6539;&#x5B57;&#x6BB5;&#x540D;&#x53CA;&#x6570;&#x636E;&#x7C7B;&#x578B;
+<span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> &#x8868;&#x540D; <span class="hljs-keyword">change</span> &#x539F;&#x5B57;&#x6BB5;&#x540D; &#x65B0;&#x5B57;&#x6BB5;&#x540D; &#x6570;&#x636E;&#x7C7B;&#x578B;;
+</code></pre>
+<h3 id="&#x5B58;&#x50A8;&#x5F15;&#x64CE;"><a name="&#x5B58;&#x50A8;&#x5F15;&#x64CE;" class="anchor-navigation-ex-anchor" href="#&#x5B58;&#x50A8;&#x5F15;&#x64CE;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x5B58;&#x50A8;&#x5F15;&#x64CE;</h3>
+<p>&#x4E0D;&#x540C;&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x7684;&#x5B89;&#x5168;&#x7EA7;&#x522B;&#x3001;&#x5B58;&#x50A8;&#x529F;&#x80FD;&#x7B49;&#x4E0D;&#x4E00;&#x6837;&#xFF1A;</p>
+<ul>
+<li>MyISAM&#xFF1A;&#x5B89;&#x5168;&#x6027;&#x4F4E;&#xFF0C;&#x4E0D;&#x652F;&#x6301;&#x4E8B;&#x52A1;&#x548C;&#x5916;&#x952E;&#x3002;&#x9002;&#x5408;&#x9891;&#x7E41;&#x63D2;&#x5165;&#x548C;&#x67E5;&#x8BE2;&#x800C;&#x4E0D;&#x4FEE;&#x6539;&#x7684;&#x573A;&#x666F;</li>
+<li>InnoDB&#xFF08;&#x9ED8;&#x8BA4;&#xFF09;&#xFF1A;&#x5B89;&#x5168;&#x6027;&#x9AD8;&#xFF0C;&#x652F;&#x6301;&#x4E8B;&#x52A1;&#x548C;&#x5916;&#x952E;&#xFF0C;&#x9002;&#x5408;&#x5BF9;&#x5B89;&#x5168;&#x6027;&#x3001;&#x6570;&#x636E;&#x5B8C;&#x6574;&#x6027;&#x8981;&#x6C42;&#x8F83;&#x9AD8;&#x7684;&#x5E94;&#x7528;</li>
+<li>Memory&#xFF1A;&#x8BBF;&#x95EE;&#x901F;&#x5EA6;&#x6781;&#x5FEB;&#xFF0C;&#x4F46;&#x4E0D;&#x4F1A;&#x6C38;&#x4E45;&#x5B58;&#x50A8;&#x6570;&#x636E;&#xFF0C;&#x9002;&#x5408;&#x5BF9;&#x8BFB;&#x5199;&#x901F;&#x5EA6;&#x8981;&#x6C42;&#x8F83;&#x9AD8;&#x7684;&#x5E94;&#x7528;</li>
+</ul>
+<p>&#x4FEE;&#x6539;&#x8868;&#x7684;&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#xFF1A;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> &#x8868;&#x540D; <span class="hljs-keyword">engine</span>=<span class="hljs-keyword">Memory</span>
+</code></pre>
+<h3 id="&#x6570;&#x636E;&#x64CD;&#x4F5C;"><a name="&#x6570;&#x636E;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. &#x6570;&#x636E;&#x64CD;&#x4F5C;</h3>
+<h4 id="&#x63D2;&#x5165;&#x6570;&#x636E;"><a name="&#x63D2;&#x5165;&#x6570;&#x636E;" class="anchor-navigation-ex-anchor" href="#&#x63D2;&#x5165;&#x6570;&#x636E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63D2;&#x5165;&#x6570;&#x636E;</h4>
+<pre><code class="lang-sql"><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> &#x8868;&#x540D; (field1, field2) <span class="hljs-keyword">values</span> (value1, value2);
+</code></pre>
+<h4 id="&#x67E5;&#x8BE2;&#x6570;&#x636E;"><a name="&#x67E5;&#x8BE2;&#x6570;&#x636E;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x8BE2;&#x6570;&#x636E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x8BE2;&#x6570;&#x636E;</h4>
+<ul>
+<li>&#x67E5;&#x8BE2;&#x8868;&#x4E2D;&#x6240;&#x6709;&#x6570;&#x636E;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql"><span class="hljs-keyword">select</span> * <span class="hljs-keyword">from</span> &#x8868;&#x540D;;
+</code></pre>
+<ul>
+<li>&#x6761;&#x4EF6;&#x67E5;&#x8BE2;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql"><span class="hljs-keyword">select</span> field1, field2 <span class="hljs-keyword">from</span> &#x8868;&#x540D; [<span class="hljs-keyword">where</span> &#x6761;&#x4EF6;];
+</code></pre>
+<ul>
+<li><code>where</code>&#x652F;&#x6301;&#x7684;&#x8FD0;&#x7B97;&#x7B26;&#xFF1A;<ul>
+<li>=</li>
+<li>!=</li>
+<li>&lt;</li>
+<li>&lt;=</li>
+<li>IN(set)&#xFF1A;&#x503C;&#x5305;&#x542B;</li>
+<li>BETWEEN...AND&#xFF1A;&#x503C;&#x7684;&#x8303;&#x56F4;</li>
+<li>IS NULL</li>
+<li>IN NO NULL</li>
+<li>AND</li>
+<li>OR</li>
+<li>NOT</li>
+</ul>
+</li>
+</ul>
+<h4 id="&#x66F4;&#x65B0;&#x6570;&#x636E;"><a name="&#x66F4;&#x65B0;&#x6570;&#x636E;" class="anchor-navigation-ex-anchor" href="#&#x66F4;&#x65B0;&#x6570;&#x636E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x66F4;&#x65B0;&#x6570;&#x636E;</h4>
+<pre><code class="lang-sql"><span class="hljs-keyword">update</span> &#x8868;&#x540D; <span class="hljs-keyword">set</span> &#x5B57;&#x6BB5;&#x540D;=&#x503C; [<span class="hljs-keyword">where</span> &#x6761;&#x4EF6;];
+</code></pre>
+<blockquote>
+<p>&#x4E0D;&#x6307;&#x5B9A;&#x6761;&#x4EF6;&#x5219;&#x4FEE;&#x6539;&#x8868;&#x5185;&#x6240;&#x6709;&#x6570;&#x636E;&#x7684;&#x503C;&#x3002;</p>
+</blockquote>
+<h4 id="&#x5220;&#x9664;&#x6570;&#x636E;"><a name="&#x5220;&#x9664;&#x6570;&#x636E;" class="anchor-navigation-ex-anchor" href="#&#x5220;&#x9664;&#x6570;&#x636E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;&#x6570;&#x636E;</h4>
+<pre><code class="lang-sql"><span class="hljs-keyword">delete</span> <span class="hljs-keyword">from</span> &#x8868;&#x540D; [<span class="hljs-keyword">where</span> &#x6761;&#x4EF6;];
+</code></pre>
+<h2 id="&#x6570;&#x636E;&#x7C7B;&#x578B;"><a name="&#x6570;&#x636E;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x6570;&#x636E;&#x7C7B;&#x578B;</h2>
+<h3 id="&#x6574;&#x6570;&#x7C7B;&#x578B;"><a name="&#x6574;&#x6570;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x6574;&#x6570;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. &#x6574;&#x6570;&#x7C7B;&#x578B;</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x7C7B;&#x578B;</th>
+<th style="text-align:center">&#x89E3;&#x91CA;</th>
+<th style="text-align:center">&#x5B57;&#x8282;</th>
+<th style="text-align:center">&#x53D6;&#x503C;&#x8303;&#x56F4;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">TINYINT</td>
+<td style="text-align:center">&#x5C0F;&#x6574;&#x6570;&#x503C;</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">(-128, 127)&#x6216;&#x65E0;&#x7B26;&#x53F7;&#x8303;&#x56F4;(0, 255)</td>
+</tr>
+<tr>
+<td style="text-align:center">SMALLINT</td>
+<td style="text-align:center">&#x5927;&#x6574;&#x6570;&#x503C;</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">(-32768, 32767)</td>
+</tr>
+<tr>
+<td style="text-align:center">MEDIUMINT</td>
+<td style="text-align:center">&#x5927;&#x6574;&#x6570;&#x503C;</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">(-8388608, 8388607)</td>
+</tr>
+<tr>
+<td style="text-align:center">INT&#x6216;INTEGER</td>
+<td style="text-align:center">&#x5927;&#x6574;&#x6570;&#x503C;</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">(-2147483648, 2147483647)</td>
+</tr>
+<tr>
+<td style="text-align:center">BIGINT</td>
+<td style="text-align:center">&#x4EFB;&#x610F;&#x5927;</td>
+<td style="text-align:center">8</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x8BBE;&#x7F6E;&#x65E0;&#x7B26;&#x53F7;&#x6574;&#x578B;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql">id int unsigned;
+</code></pre>
+<ul>
+<li>&#x6574;&#x578B;&#x53EF;&#x8BBE;&#x7F6E;&#x4F4D;&#x5BBD;&#xFF0C;&#x957F;&#x5EA6;&#x4E0D;&#x8DB3;&#x8865;&#x96F6;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql"><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> person (
+    <span class="hljs-keyword">id</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">2</span>) zerofill
+)
+</code></pre>
+<h3 id="&#x6D6E;&#x70B9;&#x7C7B;&#x578B;"><a name="&#x6D6E;&#x70B9;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x6D6E;&#x70B9;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. &#x6D6E;&#x70B9;&#x7C7B;&#x578B;</h3>
+<ul>
+<li>FLOAT(m, d)&#xFF1A;4&#x5B57;&#x8282;&#xFF0C;&#x5355;&#x7CBE;&#x5EA6;</li>
+<li>DOUBLE(m, d)&#xFF1A;8&#x5B57;&#x8282;&#xFF0C;&#x53CC;&#x7CBE;&#x5EA6;</li>
+</ul>
+<p>&#x533A;&#x522B;&#xFF1A;</p>
+<ul>
+<li>&#x5360;&#x7528;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x5927;&#x5C0F;&#x4E0D;&#x540C;</li>
+<li>&#x9ED8;&#x8BA4;&#x4FDD;&#x7559;&#x5C0F;&#x6570;&#x4F4D;&#x6570;&#x4E0D;&#x540C;</li>
+<li>&#x4FDD;&#x7559;&#x7684;&#x5C0F;&#x6570;&#x6709;&#x6548;&#x7CBE;&#x5EA6;&#x4E0D;&#x540C;</li>
+</ul>
+<h3 id="&#x5B9A;&#x70B9;&#x7C7B;&#x578B;"><a name="&#x5B9A;&#x70B9;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x5B9A;&#x70B9;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3. &#x5B9A;&#x70B9;&#x7C7B;&#x578B;</h3>
+<p>decimal(m, d)&#xFF1A;&#x4E5F;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x5C0F;&#x6570;&#xFF0C;&#x672C;&#x8D28;&#x662F;&#x5C06;&#x6570;&#x636E;&#x5206;&#x4E3A;&#x4E24;&#x4E2A;&#x90E8;&#x5206;&#x5B58;&#x50A8;&#xFF0C;&#x6BCF;&#x4E2A;&#x90E8;&#x5206;&#x90FD;&#x662F;&#x6574;&#x6570;&#xFF0C;&#x975E;&#x5E38;&#x6D88;&#x8017;&#x8D44;&#x6E90;&#x3002;</p>
+<h3 id="&#x5B57;&#x7B26;&#x7C7B;&#x578B;"><a name="&#x5B57;&#x7B26;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x7B26;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>2.4. &#x5B57;&#x7B26;&#x7C7B;&#x578B;</h3>
+<ul>
+<li>CHAR(size)&#xFF1A;0-255&#x5B57;&#x8282;&#xFF0C;&#x5B9A;&#x957F;&#x5B57;&#x7B26;&#x4E32;</li>
+<li>varchar(size)&#xFF1A;&#xFF1A;0-65535&#x5B57;&#x8282;&#xFF0C;&#x53D8;&#x957F;&#x5B57;&#x7B26;&#x4E32;</li>
+</ul>
+<p>&#x533A;&#x522B;&#xFF1A;</p>
+<ul>
+<li>&#x80FD;&#x591F;&#x4FDD;&#x5B58;&#x7684;&#x6570;&#x636E;&#x5BB9;&#x91CF;&#x4E0D;&#x540C;</li>
+<li>char &#x4E0D;&#x4F1A;&#x56DE;&#x6536;&#x591A;&#x4F59;&#x7684;&#x5B57;&#x7B26;&#xFF0C;&#x8BBE;&#x7F6E;&#x957F;&#x5EA6;&#x591A;&#x5927;&#x5C31;&#x591A;&#x5927;&#xFF0C;varchar &#x4F1A;&#x56DE;&#x6536;&#x591A;&#x4F59;&#x5B57;&#x7B26;</li>
+</ul>
+<blockquote>
+<p>varchar &#x7406;&#x8BBA;&#x53EF;&#x4EE5;&#x5B58;&#x50A8; 65535 &#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x4F46;&#x5B9E;&#x9645;&#x4F1A;&#x968F;&#x7740;&#x5F53;&#x524D;&#x6570;&#x636E;&#x5E93;&#x7684;&#x5B57;&#x7B26;&#x96C6;&#x6539;&#x53D8;&#xFF0C;&#x5982;utf-8&#x4E3A; 65535/3=21845&#x5B57;&#x7B26;&#x3002;gbk 32767&#x4E2A;&#x5B57;&#x7B26;&#x3002;</p>
+</blockquote>
+<h3 id="&#x5927;&#x6587;&#x672C;&#x7C7B;&#x578B;"><a name="&#x5927;&#x6587;&#x672C;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x5927;&#x6587;&#x672C;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>2.5. &#x5927;&#x6587;&#x672C;&#x7C7B;&#x578B;</h3>
+<p>MySQL &#x4E2D;&#x5BF9;&#x6BCF;&#x4E00;&#x884C;&#x6570;&#x636E;&#x7684;&#x5927;&#x5C0F;&#x6709;&#x9650;&#x5236;&#xFF0C;&#x6BCF;&#x884C;&#x6700;&#x591A; 65534 &#x5B57;&#x8282;&#x3002;</p>
+<ul>
+<li>TINYTEXT&#xFF1A;0-255&#x5B57;&#x8282;&#xFF0C;&#x77ED;&#x6587;&#x672C;&#x5B57;&#x7B26;&#x4E32;</li>
+<li>TEXT&#xFF1A;0-65535&#x5B57;&#x8282;&#xFF0C;&#x957F;&#x6587;&#x672C;&#x6570;&#x636E;</li>
+<li>MEDIUMTEXT&#xFF1A;0-16777215&#x5B57;&#x8282;&#xFF0C;&#x4E2D;&#x7B49;&#x957F;&#x5EA6;&#x6587;&#x672C;&#x6570;&#x636E;</li>
+<li>LONGTEXT&#xFF1A;0-4294967295&#x5B57;&#x8282;&#xFF0C;&#x6781;&#x5927;&#x6587;&#x672C;&#x6570;&#x636E;</li>
+</ul>
+<blockquote>
+<p>&#x5927;&#x6587;&#x672C;&#x7C7B;&#x578B;&#x5728;&#x8868;&#x4E2D;&#x4E0D;&#x4F1A;&#x5B9E;&#x9645;&#x5360;&#x7528;&#x4FDD;&#x5B58;&#x7684;&#x5B57;&#x8282;&#x6570;&#xFF0C;&#x800C;&#x662F;&#x5229;&#x7528;10&#x5B57;&#x8282;&#x5F15;&#x7528;&#x4E86;&#x5B9E;&#x9645;&#x4FDD;&#x5B58;&#x6570;&#x636E;&#x7684;&#x5730;&#x5740;&#x3002;</p>
+</blockquote>
+<h3 id="&#x679A;&#x4E3E;&#x7C7B;&#x578B;"><a name="&#x679A;&#x4E3E;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x679A;&#x4E3E;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>2.6. &#x679A;&#x4E3E;&#x7C7B;&#x578B;</h3>
+<ul>
+<li>ENUM(&#x503C;1, &#x503C;2, ...)</li>
+</ul>
+<blockquote>
+<p>MySQL &#x4E2D;&#x7684;&#x679A;&#x4E3E;&#x662F;&#x901A;&#x8FC7;&#x6574;&#x578B;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x4ECE;1&#x5F00;&#x59CB;&#x3002;</p>
+</blockquote>
+<h3 id="&#x96C6;&#x5408;&#x7C7B;&#x578B;"><a name="&#x96C6;&#x5408;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x96C6;&#x5408;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>2.7. &#x96C6;&#x5408;&#x7C7B;&#x578B;</h3>
+<ul>
+<li>SET(&#x503C;1, &#x503C;2)&#xFF1A;&#x5B57;&#x6BB5;&#x53D6;&#x503C;&#x53EA;&#x80FD;&#x662F;&#x51E0;&#x4E2A;&#x56FA;&#x5B9A;&#x503C;&#x4E2D;&#x7684;&#x51E0;&#x4E2A;</li>
+</ul>
+<blockquote>
+<p>&#x96C6;&#x5408;&#x7C7B;&#x578B;&#x901A;&#x8FC7; 2^n &#x7684;&#x6574;&#x578B;&#x5B9E;&#x73B0;&#x7684;</p>
+</blockquote>
+<h3 id="&#x5E03;&#x5C14;&#x7C7B;&#x578B;"><a name="&#x5E03;&#x5C14;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x5E03;&#x5C14;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>2.8. &#x5E03;&#x5C14;&#x7C7B;&#x578B;</h3>
+<blockquote>
+<p>&#x5E03;&#x5C14;&#x7C7B;&#x578B;&#x4E5F;&#x901A;&#x8FC7;&#x6574;&#x578B;&#x5B9E;&#x73B0;&#xFF0C;0&#x4E3A;&#x5047;&#xFF0C;1&#x4E3A;&#x771F;&#xFF0C;&#x539F;&#x56E0;&#x662F; MySQL &#x5E95;&#x5C42;&#x662F;&#x7528; C/C++ &#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x975E;&#x96F6;&#x5373;&#x771F;&#x3002;</p>
+</blockquote>
+<h3 id="&#x65E5;&#x671F;&#x7C7B;&#x578B;"><a name="&#x65E5;&#x671F;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x65E5;&#x671F;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>2.9. &#x65E5;&#x671F;&#x7C7B;&#x578B;</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x7C7B;&#x578B;</th>
+<th style="text-align:center">&#x89E3;&#x91CA;</th>
+<th style="text-align:center">&#x5B57;&#x8282;</th>
+<th style="text-align:center">&#x683C;&#x5F0F;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">DATE</td>
+<td style="text-align:center">&#x65E5;&#x671F;</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="text-align:center">TIME</td>
+<td style="text-align:center">&#x65F6;&#x95F4;&#x503C;&#x6216;&#x6301;&#x7EED;&#x65F6;&#x95F4;</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">HH:MM:SS</td>
+</tr>
+<tr>
+<td style="text-align:center">DATETIME</td>
+<td style="text-align:center">&#x6DF7;&#x5408;&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x503C;</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">YYYY-MM-DD HH:MM:SS</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>&#x5B58;&#x50A8;&#x65F6;&#x503C;&#x8981;&#x52A0;&#x5F15;&#x53F7;&#x3002;</p>
+</blockquote>
+<h2 id="&#x6570;&#x636E;&#x5B8C;&#x6574;&#x6027;"><a name="&#x6570;&#x636E;&#x5B8C;&#x6574;&#x6027;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x5B8C;&#x6574;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x6570;&#x636E;&#x5B8C;&#x6574;&#x6027;</h2>
+<p>&#x6570;&#x636E;&#x5B8C;&#x6574;&#x6027;&#x6307;&#x4FDD;&#x8BC1;&#x4FDD;&#x5B58;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x90FD;&#x662F;&#x6B63;&#x786E;&#x7684;&#xFF0C;&#x901A;&#x8FC7;&#x521B;&#x5EFA;&#x8868;&#x65F6;&#x7ED9;&#x8868;&#x6DFB;&#x52A0;&#x7EA6;&#x675F;&#x5B9E;&#x73B0;&#xFF0C;&#x5206;&#x4E3A;&#x4E09;&#x7C7B;&#xFF1A;</p>
+<ul>
+<li>&#x5B9E;&#x4F53;&#x5B8C;&#x6574;&#x6027;</li>
+<li>&#x57DF;&#x5B8C;&#x6574;&#x6027;</li>
+<li>&#x53C2;&#x7167;&#x5B8C;&#x6574;&#x6027;</li>
+</ul>
+<h3 id="&#x5B9E;&#x4F53;&#x5B8C;&#x6574;&#x6027;"><a name="&#x5B9E;&#x4F53;&#x5B8C;&#x6574;&#x6027;" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x4F53;&#x5B8C;&#x6574;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. &#x5B9E;&#x4F53;&#x5B8C;&#x6574;&#x6027;</h3>
+<p>&#x8868;&#x4E2D;&#x7684;&#x4E00;&#x884C;&#x6570;&#x636E;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5B9E;&#x4F53;&#xFF08;entity&#xFF09;&#xFF0C;&#x9700;&#x4FDD;&#x8BC1;&#x6BCF;&#x4E00;&#x884C;&#x6570;&#x636E;&#x7684;&#x552F;&#x4E00;&#x6027;&#x3002;</p>
+<p>&#x7EA6;&#x675F;&#x7C7B;&#x578B;&#xFF1A;</p>
+<h4 id="&#x4E3B;&#x952E;&#x7EA6;&#x675F;-primary-key"><a name="&#x4E3B;&#x952E;&#x7EA6;&#x675F;-primary-key" class="anchor-navigation-ex-anchor" href="#&#x4E3B;&#x952E;&#x7EA6;&#x675F;-primary-key"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E3B;&#x952E;&#x7EA6;&#x675F; primary key</h4>
+<p>&#x552F;&#x4E00;&#x6807;&#x8BC6;&#x6BCF;&#x4E00;&#x6761;&#x6570;&#x636E;&#x3002;</p>
+<pre><code class="lang-sql">// &#x65B9;&#x5F0F;&#x4E00;
+<span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> <span class="hljs-keyword">user</span>(
+    <span class="hljs-keyword">id</span> <span class="hljs-built_in">int</span> primary <span class="hljs-keyword">key</span>,
+    user_name <span class="hljs-built_in">varchar</span>(<span class="hljs-number">5</span>)
+)
+
+// &#x65B9;&#x5F0F;&#x4E8C;
+<span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> <span class="hljs-keyword">user</span>(
+    <span class="hljs-keyword">id</span> <span class="hljs-built_in">int</span>,
+    user_name <span class="hljs-built_in">varchar</span>(<span class="hljs-number">5</span>),
+    primary <span class="hljs-keyword">key</span>(<span class="hljs-keyword">id</span>)
+)
+</code></pre>
+<ul>
+<li>&#x4E3B;&#x952E;&#x5B57;&#x6BB5;&#x53D6;&#x503C;&#x4E0D;&#x53EF;&#x91CD;&#x590D;</li>
+<li>&#x4E3B;&#x952E;&#x5B57;&#x6BB5;&#x4E0D;&#x80FD;&#x4E3A; NULL</li>
+<li>&#x4E00;&#x5F20;&#x8868;&#x4E2D;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;&#x4E3B;&#x952E;</li>
+</ul>
+<p>&#x8054;&#x5408;&#x4E3B;&#x952E;&#xFF1A;&#x540C;&#x65F6;&#x5C06;&#x591A;&#x4E2A;&#x5B57;&#x6BB5;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x4E3B;&#x952E;&#x3002;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> <span class="hljs-keyword">user</span>(
+    <span class="hljs-keyword">id</span> <span class="hljs-built_in">int</span> primary <span class="hljs-keyword">key</span>,
+    user_name <span class="hljs-built_in">varchar</span>(<span class="hljs-number">5</span>),
+    primary <span class="hljs-keyword">key</span>(<span class="hljs-keyword">id</span>, user_name)
+)
+</code></pre>
+<h4 id="&#x552F;&#x4E00;&#x7EA6;&#x675F;-unique"><a name="&#x552F;&#x4E00;&#x7EA6;&#x675F;-unique" class="anchor-navigation-ex-anchor" href="#&#x552F;&#x4E00;&#x7EA6;&#x675F;-unique"><i class="fa fa-link" aria-hidden="true"></i></a>&#x552F;&#x4E00;&#x7EA6;&#x675F; unique</h4>
+<p>&#x548C;&#x4E3B;&#x952E;&#x7684;&#x5F02;&#x540C;&#xFF1A;</p>
+<ul>
+<li>&#x90FD;&#x80FD;&#x4FDD;&#x8BC1;&#x5B57;&#x6BB5;&#x7684;&#x53D6;&#x503C;&#x4E0D;&#x91CD;&#x590D;</li>
+<li>&#x4E3B;&#x952E;&#x5728;&#x4E00;&#x5F20;&#x8868;&#x4E2D;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;&#xFF0C;&#x552F;&#x4E00;&#x7EA6;&#x675F;&#x4E0D;&#x9650;&#x5236;</li>
+<li>&#x8BBE;&#x7F6E;&#x552F;&#x4E00;&#x7EA6;&#x675F;&#x7684;&#x5B57;&#x6BB5;&#x53EF;&#x4EE5;&#x4E3A; NULL</li>
+</ul>
+<h4 id="&#x81EA;&#x52A8;&#x589E;&#x957F;&#x5217;-autoincrement"><a name="&#x81EA;&#x52A8;&#x589E;&#x957F;&#x5217;-autoincrement" class="anchor-navigation-ex-anchor" href="#&#x81EA;&#x52A8;&#x589E;&#x957F;&#x5217;-autoincrement"><i class="fa fa-link" aria-hidden="true"></i></a>&#x81EA;&#x52A8;&#x589E;&#x957F;&#x5217; auto_increment</h4>
+<pre><code class="lang-sql"><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> person(
+    <span class="hljs-keyword">id</span> <span class="hljs-built_in">int</span> auto_increment primary <span class="hljs-keyword">key</span>,
+    <span class="hljs-keyword">name</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">20</span>)
+)
+</code></pre>
+<ul>
+<li>&#x81EA;&#x52A8;&#x589E;&#x957F;&#x7684;&#x5B57;&#x6BB5;&#x53EF;&#x4EE5;&#x4E3A; NULL&#xFF0C;&#x5B58;&#x50A8;&#x540E;&#x4F1A;&#x81EA;&#x52A8;&#x589E;&#x52A0;&#x3002;</li>
+</ul>
+<h4 id="&#x4FEE;&#x6539;&#x7EA6;&#x675F;"><a name="&#x4FEE;&#x6539;&#x7EA6;&#x675F;" class="anchor-navigation-ex-anchor" href="#&#x4FEE;&#x6539;&#x7EA6;&#x675F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FEE;&#x6539;&#x7EA6;&#x675F;</h4>
+<p><strong>1. &#x4FEE;&#x6539;&#x4E3B;&#x952E;</strong></p>
+<pre><code class="lang-sql"><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> &#x8868;&#x540D; <span class="hljs-keyword">add</span> primary <span class="hljs-keyword">key</span>(&#x5B57;&#x6BB5;);
+</code></pre>
+<p><strong>2. &#x4FEE;&#x6539;&#x552F;&#x4E00;&#x7EA6;&#x675F;</strong></p>
+<pre><code class="lang-sql"><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> &#x8868;&#x540D; <span class="hljs-keyword">add</span> <span class="hljs-keyword">unique</span>(&#x5B57;&#x6BB5;);
+</code></pre>
+<p><strong>3. &#x4FEE;&#x6539;&#x81EA;&#x52A8;&#x589E;&#x957F;&#x5217;</strong></p>
+<pre><code class="lang-sql">// &#x5FC5;&#x987B;&#x662F;&#x4E3B;&#x952E;&#x624D;&#x80FD;&#x4FEE;&#x6539;
+<span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> &#x8868;&#x540D; <span class="hljs-keyword">modify</span> &#x5B57;&#x6BB5;&#x540D; &#x6570;&#x636E;&#x7C7B;&#x578B; auto_increment;
+</code></pre>
+<h3 id="&#x57DF;&#x5B8C;&#x6574;&#x6027;"><a name="&#x57DF;&#x5B8C;&#x6574;&#x6027;" class="anchor-navigation-ex-anchor" href="#&#x57DF;&#x5B8C;&#x6574;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. &#x57DF;&#x5B8C;&#x6574;&#x6027;</h3>
+<ul>
+<li>&#x4E00;&#x884C;&#x6570;&#x636E;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5355;&#x5143;&#x683C;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x57DF;&#xFF0C;&#x5373;&#x6BCF;&#x4E00;&#x4E2A;&#x5B57;&#x6BB5;</li>
+<li>&#x57DF;&#x7684;&#x5B8C;&#x6574;&#x6027;&#x6307;&#x4FDD;&#x8BC1;&#x5355;&#x5143;&#x683C;&#x6570;&#x636E;&#x7684;&#x6B63;&#x786E;&#x6027;<ul>
+<li>&#x4F7F;&#x7528;&#x6B63;&#x786E;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;</li>
+<li>&#x975E;&#x7A7A;&#x7EA6;&#x675F;&#xFF08;not null&#xFF09;</li>
+<li>&#x9ED8;&#x8BA4;&#x7EA6;&#x675F;&#xFF08;default&#xFF09;</li>
+</ul>
+</li>
+</ul>
+<h3 id="&#x53C2;&#x7167;&#x5B8C;&#x6574;&#x6027;"><a name="&#x53C2;&#x7167;&#x5B8C;&#x6574;&#x6027;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x7167;&#x5B8C;&#x6574;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>3.3. &#x53C2;&#x7167;&#x5B8C;&#x6574;&#x6027;</h3>
+<p>&#x53C2;&#x7167;&#x5B8C;&#x6574;&#x6027;&#x53C8;&#x79F0;&#x5F15;&#x7528;&#x5B8C;&#x6574;&#x6027;&#xFF0C;&#x7528;&#x4E8E;&#x4FDD;&#x8BC1;&#x591A;&#x8868;&#x4E4B;&#x95F4;&#x5F15;&#x7528;&#x5173;&#x7CFB;&#x7684;&#x6B63;&#x786E;&#x6027;&#x3002;</p>
+<p>&#x8868;&#x4E0E;&#x8868;&#x7684;&#x5173;&#x7CFB;&#xFF1A;</p>
+<ul>
+<li>&#x4E00;&#x5BF9;&#x4E00;&#xFF1A;&#x4E0D;&#x9700;&#x8981;&#x62C6;&#x5206;</li>
+<li>&#x4E00;&#x5BF9;&#x591A;&#xFF1A;&#x9700;&#x8981;&#x62C6;&#x5206;&#xFF0C;&#x4E00;&#x4E2A;&#x8868;&#x5B58;&#x5916;&#x952E;</li>
+<li>&#x591A;&#x5BF9;&#x591A;&#xFF1A;&#x9700;&#x8981;&#x62C6;&#x5206;&#xFF0C;&#x6DFB;&#x52A0;&#x5173;&#x7CFB;&#x8868;</li>
+</ul>
+<p><strong>&#x5916;&#x952E;</strong>&#xFF1A;&#x5982;&#x679C;&#x4E00;&#x5F20;&#x8868;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x5B57;&#x6BB5;&#x6307;&#x5411;&#x4E86;&#x53E6;&#x4E00;&#x5F20;&#x8868;&#x7684;&#x4E3B;&#x952E;&#xFF0C;&#x8BE5;&#x5B57;&#x6BB5;&#x4E3A;&#x5916;&#x952E;&#xFF0C;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> grade(
+    <span class="hljs-keyword">id</span> <span class="hljs-built_in">int</span> auto_increment primary <span class="hljs-keyword">key</span>,
+    uid <span class="hljs-built_in">int</span>,
+    foreign <span class="hljs-keyword">key</span>(&#x5916;&#x952E;&#x540D;&#x5B57;) <span class="hljs-keyword">references</span> &#x4E3B;&#x8868;&#x540D;(&#x4E3B;&#x8868;&#x4E3B;&#x952E;&#x540D;)
+)
+</code></pre>
+<ul>
+<li>&#x53EA;&#x6709; InnoDB &#x7684;&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x624D;&#x652F;&#x6301;&#x5916;&#x952E;&#x7EA6;&#x675F;</li>
+<li>&#x5916;&#x952E;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x5FC5;&#x987B;&#x4E0E;&#x6307;&#x5411;&#x7684;&#x4E3B;&#x952E;&#x4E00;&#x81F4;</li>
+<li>&#x4E00;&#x5BF9;&#x591A;&#x7684;&#x5173;&#x7CFB;&#x4E2D;&#xFF0C;&#x5916;&#x952E;&#x4E00;&#x822C;&#x5B9A;&#x4E49;&#x5728;&#x591A;&#x7684;&#x4E00;&#x65B9;</li>
+<li>&#x5B9A;&#x4E49;&#x5916;&#x952E;&#x7684;&#x8868;&#x79F0;&#x4E3A;<strong>&#x4ECE;&#x8868;</strong>&#xFF0C;&#x88AB;&#x5916;&#x952E;&#x5F15;&#x7528;&#x7684;&#x8868;&#x79F0;&#x4E3A;<strong>&#x4E3B;&#x8868;</strong></li>
+</ul>
+<h4 id="&#x5916;&#x952E;&#x5176;&#x5B83;&#x64CD;&#x4F5C;"><a name="&#x5916;&#x952E;&#x5176;&#x5B83;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x5916;&#x952E;&#x5176;&#x5B83;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5916;&#x952E;&#x5176;&#x5B83;&#x64CD;&#x4F5C;</h4>
+<ul>
+<li>&#x52A8;&#x6001;&#x6DFB;&#x52A0;&#x5916;&#x952E;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql"><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> &#x4ECE;&#x8868;&#x540D;&#x79F0; <span class="hljs-keyword">add</span> foreign <span class="hljs-keyword">key</span>(&#x5916;&#x952E;&#x5B57;&#x6BB5;&#x540D;&#x79F0;) <span class="hljs-keyword">references</span> &#x4E3B;&#x8868;&#x540D;&#x79F0;(&#x4E3B;&#x8868;&#x4E3B;&#x952E;&#x540D;&#x79F0;);
+</code></pre>
+<ul>
+<li>&#x67E5;&#x770B;&#x5916;&#x952E;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql"><span class="hljs-keyword">show</span> <span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> &#x4ECE;&#x8868;&#x540D;&#x79F0;;
+</code></pre>
+<ul>
+<li>&#x5220;&#x9664;&#x5916;&#x952E;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql"><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> &#x4ECE;&#x8868;&#x540D; <span class="hljs-keyword">drop</span> foreign <span class="hljs-keyword">key</span> &#x5916;&#x952E;&#x540D;;
+</code></pre>
+<p>&#x5916;&#x952E;&#x64CD;&#x4F5C;&#x6709;&#x4E09;&#x4E2A;&#x6A21;&#x5F0F;&#xFF1A;</p>
+<ul>
+<li>&#x4E25;&#x683C;&#x64CD;&#x4F5C;&#xFF1A;<ul>
+<li>&#x4E3B;&#x8868;&#x4E0D;&#x5B58;&#x5728;&#x5BF9;&#x5E94;&#x6570;&#x636E;&#xFF0C;&#x4ECE;&#x8868;&#x4E0D;&#x5141;&#x8BB8;&#x6761;&#x4EF6;</li>
+<li>&#x4ECE;&#x8868;&#x5F15;&#x7528;&#x7740;&#x6570;&#x636E;&#xFF0C;&#x4E3B;&#x8868;&#x4E0D;&#x5141;&#x8BB8;&#x5220;&#x9664;&#x548C;&#x4FEE;&#x6539;&#x4E3B;&#x952E;</li>
+</ul>
+</li>
+<li>&#x6307;&#x63A7;&#x64CD;&#x4F5C;</li>
+<li>&#x7EA7;&#x8054;&#x64CD;&#x4F5C;&#xFF1A;&#x81EA;&#x52A8;&#x66F4;&#x65B0;</li>
+</ul>
+<h2 id="&#x67E5;&#x8BE2;&#x6DF1;&#x5165;"><a name="&#x67E5;&#x8BE2;&#x6DF1;&#x5165;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x8BE2;&#x6DF1;&#x5165;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x67E5;&#x8BE2;&#x6DF1;&#x5165;</h2>
+<h4 id="&#x53BB;&#x91CD;"><a name="&#x53BB;&#x91CD;" class="anchor-navigation-ex-anchor" href="#&#x53BB;&#x91CD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53BB;&#x91CD;</h4>
+<pre><code class="lang-sql"><span class="hljs-keyword">select</span> <span class="hljs-keyword">distinct</span> &#x5B57;&#x6BB5;&#x540D; <span class="hljs-keyword">from</span> &#x8868;&#x540D;;
+</code></pre>
+<h4 id="&#x6392;&#x5E8F;"><a name="&#x6392;&#x5E8F;" class="anchor-navigation-ex-anchor" href="#&#x6392;&#x5E8F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6392;&#x5E8F;</h4>
+<pre><code class="lang-sql"><span class="hljs-keyword">select</span> * <span class="hljs-keyword">from</span> &#x8868;&#x540D; <span class="hljs-keyword">order</span> <span class="hljs-keyword">by</span> &#x6392;&#x5E8F;&#x4F9D;&#x636E;<span class="hljs-number">1</span> <span class="hljs-keyword">asc</span>/<span class="hljs-keyword">desc</span>, &#x6392;&#x5E8F;&#x4F9D;&#x636E;<span class="hljs-number">2</span> <span class="hljs-keyword">asc</span>/<span class="hljs-keyword">desc</span>;
+</code></pre>
+<ul>
+<li>asc &#x5347;&#x5E8F;</li>
+<li>desc&#x964D;&#x5E8F;</li>
+</ul>
+<h4 id="&#x6A21;&#x7CCA;&#x67E5;&#x627E;"><a name="&#x6A21;&#x7CCA;&#x67E5;&#x627E;" class="anchor-navigation-ex-anchor" href="#&#x6A21;&#x7CCA;&#x67E5;&#x627E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6A21;&#x7CCA;&#x67E5;&#x627E;</h4>
+<pre><code class="lang-sql"><span class="hljs-keyword">select</span> * <span class="hljs-keyword">from</span> &#x8868;&#x540D; <span class="hljs-keyword">where</span> &#x5B57;&#x6BB5; <span class="hljs-keyword">like</span> &#x503C;;
+</code></pre>
+<ul>
+<li>&#x503C;&#x4E2D;&#x4F7F;&#x7528;<code>%</code>&#x4F5C;&#x4E3A;&#x901A;&#x914D;&#x7B26;&#xFF0C;&#x5982;<code>&#x859B;%</code>&#x3002;</li>
+</ul>
+<h4 id="&#x8DF3;&#x8FC7;"><a name="&#x8DF3;&#x8FC7;" class="anchor-navigation-ex-anchor" href="#&#x8DF3;&#x8FC7;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8DF3;&#x8FC7;</h4>
+<pre><code class="lang-sql"><span class="hljs-keyword">select</span> * <span class="hljs-keyword">from</span> &#x8868;&#x540D; <span class="hljs-keyword">limit</span> <span class="hljs-number">0</span>, <span class="hljs-number">3</span>; // &#x524D;&#x4E09;&#x6761;&#x6570;&#x636E;
+</code></pre>
+<h4 id="&#x51FD;&#x6570;"><a name="&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x51FD;&#x6570;</h4>
+<pre><code class="lang-sql"><span class="hljs-keyword">select</span> <span class="hljs-keyword">max</span>(&#x8868;&#x540D;.&#x5B57;&#x6BB5;&#x540D;) <span class="hljs-keyword">form</span> &#x8868;&#x540D;;
+</code></pre>
+<ul>
+<li>min()</li>
+<li>sum()</li>
+<li>avg()&#xFF1A;&#x6C42;&#x5E73;&#x5747;&#x503C;</li>
+</ul>
+<h4 id="&#x96C6;&#x5408;"><a name="&#x96C6;&#x5408;" class="anchor-navigation-ex-anchor" href="#&#x96C6;&#x5408;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x96C6;&#x5408;</h4>
+<ul>
+<li>&#x67E5;&#x8BE2;&#x5728;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql"><span class="hljs-keyword">select</span> * <span class="hljs-keyword">from</span> &#x8868;&#x540D; <span class="hljs-keyword">where</span> &#x5B57;&#x6BB5;&#x540D; <span class="hljs-keyword">in</span> (&#x503C;<span class="hljs-number">1</span>, &#x503C;<span class="hljs-number">2</span>, &#x503C;<span class="hljs-number">3</span>);
+</code></pre>
+<blockquote>
+<p>&#x4E0D;&#x5728;&#x96C6;&#x5408;&#x5185;&#xFF1A;<code>not in</code></p>
+</blockquote>
+<ul>
+<li>&#x67E5;&#x8BE2;&#x5728;&#x8303;&#x56F4;&#x5185;&#x7684;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql"><span class="hljs-keyword">select</span> * <span class="hljs-keyword">from</span> &#x8868;&#x540D; <span class="hljs-keyword">where</span> &#x5B57;&#x6BB5;&#x540D; <span class="hljs-keyword">between</span> &#x8D77;&#x59CB;&#x503C; <span class="hljs-keyword">and</span> &#x7ED3;&#x675F;&#x503C;; // &#x5DE6;&#x53F3;&#x90FD;&#x5305;&#x542B;
+</code></pre>
+<h4 id="&#x8054;&#x67E5;"><a name="&#x8054;&#x67E5;" class="anchor-navigation-ex-anchor" href="#&#x8054;&#x67E5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8054;&#x67E5;</h4>
+<ul>
+<li>&#x65E7;&#x8BED;&#x6CD5;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql"><span class="hljs-keyword">select</span> * <span class="hljs-keyword">from</span> &#x8868;<span class="hljs-number">1</span>, &#x8868;<span class="hljs-number">2</span> <span class="hljs-keyword">where</span> &#x8868;<span class="hljs-number">1.</span><span class="hljs-keyword">id</span> = &#x8868;<span class="hljs-number">2.</span>_id;
+</code></pre>
+<ul>
+<li>&#x65B0;&#x8BED;&#x6CD5; join&#xFF1A;</li>
+</ul>
+<pre><code class="lang-sql"><span class="hljs-keyword">select</span> * <span class="hljs-keyword">from</span> &#x8868;<span class="hljs-number">1</span> <span class="hljs-keyword">join</span> &#x8868;<span class="hljs-number">2</span> <span class="hljs-keyword">on</span> &#x8868;<span class="hljs-number">1.</span><span class="hljs-keyword">id</span> = &#x8868;<span class="hljs-number">2.</span>_id;
+</code></pre>
+<blockquote>
+<p>&#x4EE5;&#x4E0A;&#x8054;&#x67E5;&#x65B9;&#x5F0F;&#x5982;&#x679C;&#x4E00;&#x65B9;&#x6CA1;&#x6709;&#x6570;&#x636E;&#x5219;&#x6574;&#x4E2A;&#x6570;&#x636E;&#x90FD;&#x4F1A;&#x88AB;&#x8FC7;&#x6EE4;&#x6389;&#xFF08;&#x4E0E; MongoDB &#x7684; aggregate &#x5173;&#x8054;&#x7C7B;&#x4F3C;&#xFF09;&#xFF0C;&#x82E5;&#x4E0D;&#x9700;&#x8981;&#x6574;&#x4E2A;&#x8FC7;&#x6EE4;&#xFF0C;&#x4F7F;&#x7528; <strong><code>left join</code></strong>&#xFF08;&#x66F4;&#x5E38;&#x7528;&#xFF09; &#x548C; <code>right join</code>&#x3002;</p>
+</blockquote>
+<h4 id="&#x5206;&#x7EC4;"><a name="&#x5206;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#&#x5206;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5206;&#x7EC4;</h4>
+<pre><code class="lang-sql"><span class="hljs-keyword">select</span> &#x5206;&#x7EC4;&#x4F9D;&#x636E;&#x5B57;&#x6BB5;, <span class="hljs-keyword">avg</span>(&#x5B57;&#x6BB5;<span class="hljs-number">2</span>) <span class="hljs-keyword">from</span> &#x8868;&#x540D; <span class="hljs-keyword">group</span> <span class="hljs-keyword">by</span> &#x5206;&#x7EC4;&#x4F9D;&#x636E;&#x5B57;&#x6BB5; <span class="hljs-keyword">having</span> &#x8FC7;&#x6EE4;&#x6761;&#x4EF6;;
+</code></pre>
+<blockquote>
+<p><code>group by</code> &#x5FC5;&#x987B;&#x7ED3;&#x5408;&#x51FD;&#x6570;&#x4F7F;&#x7528;&#x3002;</p>
+<p><code>having</code> &#x53EA;&#x80FD;&#x4E0E; <code>group by</code> &#x7ED3;&#x5408;&#x4F7F;&#x7528;&#x6765;&#x8FC7;&#x6EE4;&#xFF0C;&#x6307;&#x5B9A;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;&#x7684;&#x522B;&#x540D;&#x6765;&#x64CD;&#x4F5C;&#x8FC7;&#x6EE4;&#x6761;&#x4EF6;&#x3002;</p>
+</blockquote>
+<h4 id="case-when"><a name="case-when" class="anchor-navigation-ex-anchor" href="#case-when"><i class="fa fa-link" aria-hidden="true"></i></a>case when</h4>
+<p>&#x5F53;&#x2026;&#x2026;&#x5219;&#x2026;&#x2026;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">SELECT</span>
+    s.<span class="hljs-keyword">NAME</span>,
+    c.score,
+<span class="hljs-keyword">CASE</span>
+        <span class="hljs-keyword">WHEN</span> c.score &gt; <span class="hljs-number">90</span> <span class="hljs-keyword">THEN</span>
+        <span class="hljs-string">&quot;&#x725B;&#x903C;&quot;</span> 
+        <span class="hljs-keyword">WHEN</span> c.score <span class="hljs-keyword">BETWEEN</span> <span class="hljs-number">60</span> 
+        <span class="hljs-keyword">AND</span> <span class="hljs-number">90</span> <span class="hljs-keyword">THEN</span>
+            <span class="hljs-string">&quot;&#x9EBB;&#x9EBB;&#x5F97;&quot;</span> <span class="hljs-keyword">ELSE</span> <span class="hljs-string">&quot;&#x7B28;&#x903C;&quot;</span> 
+        <span class="hljs-keyword">END</span> 
+        <span class="hljs-keyword">FROM</span>
+        student s
+    <span class="hljs-keyword">JOIN</span> score c <span class="hljs-keyword">ON</span> s.<span class="hljs-keyword">id</span> = c.student_id;
+</code></pre>
+<h2 id="&#x4E8B;&#x52A1;"><a name="&#x4E8B;&#x52A1;" class="anchor-navigation-ex-anchor" href="#&#x4E8B;&#x52A1;"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x4E8B;&#x52A1;</h2>
+<p>&#x94F6;&#x884C;&#x8F6C;&#x8D26;&#x4F8B;&#x5B50;&#xFF0C;&#x5982;&#x679C;&#x540E;&#x9762;&#x6709;&#x4E00;&#x6B65;&#x64CD;&#x4F5C;&#x5931;&#x8D25;&#xFF0C;&#x6574;&#x4E2A;&#x6570;&#x636E;&#x5E94;&#x8BE5;&#x56DE;&#x6EDA;&#x81F3;&#x5168;&#x90E8;&#x64CD;&#x4F5C;&#x4E4B;&#x524D;&#x3002;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">start</span> <span class="hljs-keyword">transaction</span>
+...&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;
+<span class="hljs-keyword">commit</span>;
+</code></pre>
+<p>&#x4E8B;&#x52A1;&#x9694;&#x79BB;&#x7684;&#x56DB;&#x4E2A;&#x7EA7;&#x522B;&#xFF1A;</p>
+<ul>
+<li><strong>read uncommitted</strong>&#xFF1A;&#x8BFB;&#x53D6;&#x672A;&#x63D0;&#x4EA4;&#x7684;&#x5185;&#x5BB9;&#xFF08;&#x6700;&#x4F4E;&#x7684;&#x4E8B;&#x52A1;&#x9694;&#x79BB;&#x7EA7;&#x522B;&#xFF09;</li>
+<li><strong>read committed</strong>&#xFF1A;&#x8BFB;&#x53D6;&#x63D0;&#x4EA4;&#x7684;&#x5185;&#x5BB9;&#xFF08;&#x4E0D;&#x53EF;&#x91CD;&#x590D;&#x8BFB;&#x53D6;&#xFF0C;&#x91CD;&#x590D;&#x8BFB;&#x53D6;&#x53EF;&#x80FD;&#x7ED3;&#x679C;&#x4E0D;&#x540C;&#xFF0C;&#x522B;&#x7684;&#x4E8B;&#x52A1;&#x53EF;&#x80FD; commit &#x4E86;&#xFF09;</li>
+<li><strong>reaptable read</strong>&#xFF1A;&#x9ED8;&#x8BA4;&#x673A;&#x5236;&#xFF0C;&#x53EF;&#x91CD;&#x590D;&#x8BFB;&#xFF08;&#x8BFB;&#x53D6;&#x7684;&#x7ED3;&#x679C;&#x76F8;&#x540C;&#xFF0C;MVVC&#x591A;&#x7248;&#x672C;&#x5E76;&#x53D1;&#x63A7;&#x5236;&#x673A;&#x5236;&#x89E3;&#x51B3;&#x4E86;&#x63D2;&#x5165;&#x5BFC;&#x81F4;&#x7684;&#x5E7B;&#x5F71;&#x884C;&#x8BFB;&#x53D6;&#x95EE;&#x9898;&#xFF09;</li>
+<li><strong>serializable</strong>&#xFF1A;&#x5E8F;&#x5217;&#x5316;&#xFF08;&#x4E0D;&#x5141;&#x8BB8;&#x4E8B;&#x52A1;&#x5E76;&#x53D1;&#xFF0C;&#x4E25;&#x91CD;&#x9650;&#x5236;&#x6027;&#x80FD;&#xFF09;</li>
+</ul>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> <a href="https://xuezenghui.com" target="_blank">Zander Hsueh</a> </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <i>updated</i> 2022-06-12 19:33:04 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="MongoDB.html" class="navigation navigation-prev " aria-label="Previous page: Mongo DB">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Promise.html" class="navigation navigation-next " aria-label="Next page: Promise">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"My SQL","level":"1.2.2","depth":2,"next":{"title":"Promise","level":"1.2.3","depth":2,"path":"Dev/Promise.md","ref":"Dev/Promise.md","articles":[]},"previous":{"title":"Mongo DB","level":"1.2.1","depth":2,"path":"Dev/MongoDB.md","ref":"Dev/MongoDB.md","articles":[]},"dir":"ltr"},"config":{"plugins":["code","anchor-navigation-ex","page-footer-ex","-lunr","-search","search-pro","-sharing","splitter","hide-element","insert-logo","expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"page-footer-ex":{"copyright":"[Zander Hsueh](https://xuezenghui.com)","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<i>updated</i>"},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 60px; min-height: 60px","url":"/images/logo.png"}},"theme":"default","author":"Zander Hsueh","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*","sharing":false},"file":{"path":"Dev/MySQL.md","mtime":"2022-06-12T11:33:04.291Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-12T11:36:23.121Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
