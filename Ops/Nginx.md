@@ -249,3 +249,103 @@ Nginx 默认为**多进程**结构：
 4. 轮询等待连接全部关闭
 5. 退出进程
 
+### Nginx 的模块
+查看模块：编译完成后进入 `./objs` 目录，查看 `ngx_modules.c` 文件。
+
+Nginx 核心模块：
+![nginx-module-type](../images/nginx_module_type.png)
+
+### 共享内存
+Worker 进程之间通过**共享内存**可进行进程间协同，共享数据。共享内存中使用红黑树来管理数据，插入、删除操作效率极高。
+
+共享内存通过 Slab 管理器来分配内存。
+
+### Nginx 中的容器
+- 数组
+- 链表
+- 队列
+- **哈希表**
+- **红黑树**
+- 基数树
+
+#### 哈希表
+以 key-value 的形式连续存储，将 value 通过哈希函数映射到相应的哈希表位置。Nginx 的哈希表仅应用于存储静态不变的内容，Nginx 刚启动时已经可以确定哈希表中的元素个数。
+
+![nginx-hash-t](../images/hash_t.png)
+
+使用哈希表的模块：
+
+![nginx_hash_t_config](../images/nginx_hash_t_config.png)
+
+> 配置 bucket size 时需要考虑对齐问题，一般设置为 CPU Cache Line，防止读取哈希表值时的多次访问。
+
+#### 红黑树
+
+![nginx_rbtree](../images/nginx_rbtree.png)
+
+特点：
+
+- 高度不会超过 2 倍 log(n)
+- 增删改查算法复杂度为 O(log(n))
+- 遍历复杂度 O(n)
+
+## HTTP 模块
+```nginx
+main
+http {
+    upstream {...}
+    split_clients {...}
+    map {...}
+    geo {...}
+    server {
+        if(){...}
+        location {
+            limit_except {...}
+        }
+        location {
+            location {...}
+        }
+    }
+    server {...}
+}
+```
+
+不同 Context 下指令的合并遵循以下规则：
+
+- 值指令：存储匹配项的值
+    - 可以合并
+    - 例如：root、access_log、gzip
+    - 继承规则：子配置存在时，直接覆盖父模块配置；子配置不存在时，直接使用父模块配置
+- 动作类指令：指定行为
+    - 不可以合并
+    - 例如：rewrite、proxy_pass
+    - 生效阶段：server_rewrite 阶段、rewrite 阶段、content 阶段
+
+### Listen 指令
+指定服务监听的地址。支持指定 address[:port]、port 或 unix:path。示例：
+
+```
+listen 127.0.0.1:8080;
+listen 127.0.0.1;
+listen 8000;
+listen *:8000;
+listen localhost:8000 bind; # 旧的 linux 系统
+listen unix:/var/run/nginx.sock;
+listen [::]:8000 ipv6only=on;
+listen [::1];
+```
+
+### 处理 HTTP 请求头部的流程
+![nginx_http_header](../images/nginx_http_header.png)
+
+![nginx_get_http_header](../images/nginx_get_http_header.png)
+
+### 如何找到处理请求的 server 指令块
+`server_name` 指令：
+
+- 可指定一个或多个域名，第一个为主域名
+- 可指定泛域名（只支持把 * 写在最前面或最后面），如：`server_name: *.zander.fun`
+- 正则表达式匹配
+
+> 当配置了多个域名时，可使用 `server_name_in_redirect` 指令将返回主域名的 Location，该指令默认为关闭。
+

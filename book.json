@@ -13,7 +13,8 @@
     "splitter",
     "hide-element",
     "insert-logo",
-    "expandable-chapters-small"
+    "expandable-chapters-small",
+    "popup"
   ],
   "pluginsConfig": {
     "page-footer-ex": {
