@@ -349,3 +349,119 @@ listen [::1];
 
 > 当配置了多个域名时，可使用 `server_name_in_redirect` 指令将返回主域名的 Location，该指令默认为关闭。
 
+server_name 的匹配顺序：
+
+1. 精确匹配
+2. *在前的泛域名
+3. *在后的泛域名
+4. 按文件中的顺序匹配正则表达式域名
+5. default server
+    - 第 1 个
+    - listen 指定 default 关键字
+
+### 处理 HTTP 请求的 11 个阶段⭐️
+![nginx_http_11](../images/nginx_http_11.png)
+
+1. POST_READ：读取到请求后，还未进行任何处理。
+2. SERVER_REWRITE
+3. FIND_CONFIG
+4. REWRITE
+5. POST_REWRITE
+6. PREACCESS
+7. ACCESS：处理访问认证的操作
+8. POST_ACCESS
+9. PRECONTENT
+10. CONTENT
+11. LOG：打印 access_log 日志
+
+![nginx_11_process](../images/nginx_11_process.png)
+
+### 如何拿到真实的用户 IP 地址？
+网络中可能存在很多反向代理导致最后获取的用户 IP 不是真实的 IP。HTTP 请求头中有两个属性用于传递 IP：
+
+- X-Forwarded-For：可多个，用于传递上一个 IP
+- X-Real—IP：只能一个，用于传递真实的用户 IP
+
+运用 realip 模块获取及使用真实 IP：
+
+1. 添加 realip 模块(默认不会编译进 Nginx)
+
+```s
+--with-http_realip_module
+```
+
+2. Nginx 配置中使用 realip 模块的指令
+
+```nginx
+server {
+    server_name zander.fun;
+    # 设置从哪个服务器过来的请求才触发 realip
+    set_real_ip_from 43.142.117.212;
+    # 设置真实的 IP 从哪个属性取
+    #real_ip_header X-Real-IP;
+    real_ip_header X-Forwarded-For;
+    # 是否归还最后一个 IP（若 X-Forwarded-For 的最后一个 IP 是 set_real_ip_from，则忽略取前一个）
+    real_ip_recursive on;
+
+    location / {
+        return 200 "Client real ip is $remote_addr\n";
+    }
+}
+```
+
+> 使用 `curl -H 'X-Forwarded-For: 1.1.1.1,43.142.117.212' zander.fun` 进行测试
+
+### REWRITE 阶段的 rewrite 模块
+if 指令：
+
+- Syntax: `if(condition) {...}`
+- Context: server、Location
+- 条件 condition 若为真，则执行大括号内的指令；遵循值指令的继承原则。
+
+例子：
+
+```nginx
+// 判断是 IE 浏览器
+if($http_user_agent ~ MSIE){
+    rewrite ^(.*)$/msie/$1 break;
+}
+// 取出 cookie 中的 id，做进一步处理
+if($http_cookie ~* "id=([^;]+)(?:;|$)"){
+    set $id $1;
+}
+// 阻止 POST 请求
+if($http_method=POST){
+    return 405;
+}
+// 判断自定义变量
+if($slow){
+    limit_rate 10k;
+}
+// 判断导链请求
+if($invalid_referer){
+    return 403;
+}
+```
+
+**匹配规则：**
+
+字符串：
+
+- 常规字符串
+- =：精确匹配
+- ^~：匹配上后不再进行正则表达式匹配
+
+正则表达式：
+
+- ~：大小写敏感
+- ~*：忽略大小写
+
+用于内部跳转的命名 location：
+
+- @
+
+**规则匹配优先级：**
+
+![nginx_location_match](../images/nginx_location_match.png)
+
+### 对连接做限制的 limit_conn 模块
